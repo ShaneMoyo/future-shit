@@ -187,6 +187,7 @@ section.s{position:relative;z-index:10;}
 .feat:hover{border-color:rgba(0,232,200,.25);background:rgba(0,232,200,.07);}
 .feat-icon{font-size:1.1rem;flex-shrink:0;margin-top:.1rem;}
 .feat strong{color:var(--teal);font-weight:600;display:block;margin-bottom:.15rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:800px){.sci-grid{grid-template-columns:1fr!important;}}
 
 /* product visual panel */
 .prod-visual{
@@ -303,7 +304,7 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid rg
 
   <div class="h-stats">
     <div class="sc"><div class="sc-n">3</div><div class="sc-l">Active Products</div></div>
-    <div class="sc"><div class="sc-n">97%</div><div class="sc-l">Splash Reduction</div></div>
+    <div class="sc"><div class="sc-n">98.6%</div><div class="sc-l">Splash Reduction</div></div>
     <div class="sc"><div class="sc-n">12K+</div><div class="sc-l">CFD Simulations</div></div>
   </div>
 
@@ -368,24 +369,67 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid rg
         <div class="status-badge"><span class="status-dot"></span>In Development</div>
         <h2 class="prod-name">The <em>Zero</em><br>Splash Urinal</h2>
         <div class="prod-desc">
-          <p>We've all experienced it. You step away from a urinal and look down. Your shoes. Your trousers. The floor. <strong>Splashback is not a you problem — it's a design problem.</strong> And nobody has seriously tried to fix it. Until now.</p>
-          <p>Our flagship product is a completely re-engineered urinal that uses fluid dynamics, precision geometry, and nano-scale surface science to eliminate splashback entirely. Zero retrograde droplets. Zero spray. A genuinely clean experience.</p>
+          <p>Here's a wild fact: the standard urinal you use today is functionally identical to the one Marcel Duchamp placed in an art gallery as a joke in 1917. That was over 100 years ago. <strong>Nobody has seriously tried to fix it since.</strong></p>
+          <p>The result? Every single day in the United States alone, approximately <strong>1 million liters of urine splash onto restroom floors</strong>. That's not a people problem. That's not an aim problem. That is a catastrophic, century-old design failure — and it's costing facilities enormous amounts in water, chemicals, and labor every single day.</p>
+          <p>We're ending it. The Zero Splash Urinal is a ground-up re-engineering of the fixture using three interlocking technologies: precision mathematical geometry, computational fluid dynamics, and next-generation surface science. The result reduces splashback by <strong>98.6%</strong> compared to a standard urinal — validated in laboratory conditions.</p>
         </div>
         <div class="features">
-          <div class="feat"><span class="feat-icon">🌀</span><div><strong>Vortex Absorption Surface</strong>Microstructured wall geometry redirects fluid energy downward, inspired by mantis shrimp impact mechanics and lotus leaf hydrophobics.</div></div>
-          <div class="feat"><span class="feat-icon">📐</span><div><strong>15–22° Impact Angle</strong>CFD-optimized geometry eliminates the 90° impact angle that causes splashback — the stream glances, not crashes.</div></div>
-          <div class="feat"><span class="feat-icon">⚗️</span><div><strong>Nano-Hydrophobic Coating</strong>Aerospace-derived ceramic coating with 150°+ water contact angles. Self-cleaning at the molecular level.</div></div>
-          <div class="feat"><span class="feat-icon">💨</span><div><strong>Passive Airflow Channel</strong>Engineered negative pressure gradient pulls aerosol droplets toward the drain. No moving parts.</div></div>
+          <div class="feat"><span class="feat-icon">🐚</span><div><strong>The Nautilus Geometry</strong>The basin interior follows a logarithmic spiral — the same curve found in nautilus shells and sunflower seeds. This mathematically ensures that no matter where the stream hits, it always meets the surface at a shallow, splash-preventing angle. It also creates a low-profile accessible lip that works for children and wheelchair users without sacrificing performance.</div></div>
+          <div class="feat"><span class="feat-icon">🌽</span><div><strong>The Cornucopia Profile</strong>Viewed from the side, the basin is shaped using solutions to the isogonal curve problem — a surface designed so that a falling parabolic stream always impacts at 30° or less. At that angle, fluid energy redirects down the wall instead of bouncing back. In testing, this geometry alone reduced splashback to just 1.4% of what a standard urinal produces.</div></div>
+          <div class="feat"><span class="feat-icon">🪴</span><div><strong>SLIPS Surface Coating</strong>Inspired by the pitcher plant, our Slippery Liquid-Infused Porous Surface (SLIPS) coating locks a perfluorinated lubricant into the ceramic's nano-pores — creating a near-frictionless layer that repels urine completely. Unlike standard hydrophobic coatings, SLIPS works under high pressure, self-heals when scratched, and doesn't degrade with surfactants or cleaning chemicals. It's functional for over a decade.</div></div>
+          <div class="feat"><span class="feat-icon">🖥️</span><div><strong>CFD-Validated Design</strong>Every curve and surface was simulated using the same computational fluid dynamics software used in aerospace — Ansys Fluent and OpenFOAM — across thousands of simulated urination events at varying pressures, angles, and stream diameters before a single physical prototype was cast.</div></div>
         </div>
       </div>
-      <div class="prod-visual">
-        <div class="prod-visual-label">Performance Targets</div>
-        <div class="prod-big-stat"><div class="pbs-n">97%</div><div class="pbs-l">Splash Reduction vs. Standard Urinal</div></div>
-        <div class="prod-big-stat"><div class="pbs-n">12K+</div><div class="pbs-l">Computational Fluid Dynamics Simulations Run</div></div>
-        <div class="prod-big-stat"><div class="pbs-n">3</div><div class="pbs-l">Patents Pending on Core Technology</div></div>
-        <div class="prod-big-stat"><div class="pbs-n">0</div><div class="pbs-l">Moving Parts Required</div></div>
+      <div>
+        <div class="prod-visual">
+          <div class="prod-visual-label">By The Numbers</div>
+          <div class="prod-big-stat"><div class="pbs-n">98.6%</div><div class="pbs-l">Splashback reduction vs. standard urinal — lab validated</div></div>
+          <div class="prod-big-stat"><div class="pbs-n">≤30°</div><div class="pbs-l">Maximum impact angle — the critical threshold where fluid stops bouncing</div></div>
+          <div class="prod-big-stat"><div class="pbs-n">150°+</div><div class="pbs-l">Water contact angle on SLIPS surface — near-total molecular repulsion</div></div>
+          <div class="prod-big-stat"><div class="pbs-n">10yr</div><div class="pbs-l">Projected coating lifespan — self-healing, no manual re-treatment needed</div></div>
+        </div>
+        <div class="prod-visual" style="margin-top:1.2rem;">
+          <div class="prod-visual-label">The Problem We're Solving</div>
+          <div class="prod-big-stat"><div class="pbs-n">1M L</div><div class="pbs-l">Urine splashed onto US restroom floors every single day</div></div>
+          <div class="prod-big-stat"><div class="pbs-n">107yr</div><div class="pbs-l">Since the last meaningful urinal redesign — Duchamp, 1917</div></div>
+          <div class="prod-big-stat"><div class="pbs-n">50%</div><div class="pbs-l">Projected reduction in janitorial cleaning labor per fixture</div></div>
+        </div>
       </div>
     </div>
+
+    <!-- DEEP TECH EXPLAINER -->
+    <div style="margin-top:4rem;padding-top:4rem;border-top:1px solid rgba(0,232,200,.08);">
+      <p class="tag">The Science</p>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.5rem);line-height:.92;letter-spacing:.02em;margin-bottom:3rem;max-width:700px;">Why splashback happens — and exactly how we stop it.</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;">
+
+        <div class="feat" style="flex-direction:column;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:.7rem;">
+            <span class="feat-icon">💧</span>
+            <strong style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);">Step 1 — Breakup</strong>
+          </div>
+          <p style="font-size:.75rem;font-weight:300;line-height:1.9;color:var(--mist);">A urine stream exits the body at 2.5–3.5 m/s through an elliptical channel. Due to capillary-wave instabilities, it breaks into discrete high-velocity droplets within 6–7 inches. These droplets — not the continuous stream — are what cause splashback when they hit a hard surface.</p>
+        </div>
+
+        <div class="feat" style="flex-direction:column;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:.7rem;">
+            <span class="feat-icon">💥</span>
+            <strong style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);">Step 2 — Impact</strong>
+          </div>
+          <p style="font-size:.75rem;font-weight:300;line-height:1.9;color:var(--mist);">Traditional urinals present a near-90° flat wall. When droplets hit at this angle, they undergo massive deformation and eject "satellite droplets" in every direction — including back at the user and across the floor. Physics guarantees splashback at impact angles between 45° and 90°. Standard urinals guarantee exactly those angles.</p>
+        </div>
+
+        <div class="feat" style="flex-direction:column;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:.7rem;">
+            <span class="feat-icon">✅</span>
+            <strong style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);">Step 3 — Our Fix</strong>
+          </div>
+          <p style="font-size:.75rem;font-weight:300;line-height:1.9;color:var(--mist);">Below 30°, fluid energy doesn't bounce — it slides. Our Cornucopia and Nautilus geometries mathematically guarantee that every possible stream, from every possible user at every possible height and angle, meets our surface at or below that critical threshold. Then SLIPS coating ensures any remaining film evacuates instantly to the drain.</p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -460,7 +504,7 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid rg
     <p class="tag center">Get In Touch</p>
     <h2 class="cth">Let's build<br>the <em>future</em><br>together.</h2>
     <p class="csub">Research partnerships, investment, pilot programs, press, or a shared obsession with fluid dynamics — we want to hear from you.</p>
-    <a href="mailto:hello@futureshit.io" class="email-link">✉ hello@futureshit.io</a>
+    <a href="/cdn-cgi/l/email-protection#472f222b2b2807213233323522342f2e33692e28" class="email-link">✉ <span class="__cf_email__" data-cfemail="cea6aba2a2a18ea8bbbabbbcabbda6a7bae0a7a1">[email&#160;protected]</span></a>
   </div>
 </section>
 
@@ -470,7 +514,7 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid rg
 </footer>
 
 <!-- THREE.JS BACKGROUND -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const canvas = document.getElementById('bg');
 const R = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
@@ -622,9 +666,4 @@ let rx=0,ry=0;
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';rx+=(e.clientX-rx)*.12;ry+=(e.clientY-ry)*.12;});
 (function cl(){requestAnimationFrame(cl);ring.style.left=rx+'px';ring.style.top=ry+'px';})();
 document.querySelectorAll('a,.feat,.sc,.prod-visual,.status-badge').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(3)';ring.style.borderColor='rgba(0,232,200,.6)';});
-  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.borderColor='rgba(0,232,200,.32)';});
-});
-</script>
-</body>
-</html>
+  el.addEventListener('mouseenter',()=>{cur.style.transform='transla
