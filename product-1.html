@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero Splash Urinal — FUTURE SHIT</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Barlow+Condensed:ital,wght@0,300;0,700;0,800;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="prog" id="prog"></div>
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="cur-ring"></div>
+
+<header id="hdr">
+  <a href="index.html" class="logo logo-link">Future Shit<sup style="font-size:.45em;vertical-align:super;color:var(--grey);font-weight:300;">™</sup>
+    <span class="logo-sub">Bathroom Innovation Think Tank</span>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="index.html#contact" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<section class="prod-s" id="product-1" style="padding-top:5rem;">
+  <div class="prod-inner">
+    <a href="products.html" class="back-link reveal">← Back to Products</a>
+    <div class="prod-head reveal"><span class="prod-idx">Product — 01 / 03</span><span class="prod-status"><span class="sdot"></span>In Development</span></div>
+    <h2 class="prod-name reveal">Zero<br><em>Splash</em><br>Urinal</h2>
+    <div class="pstats stagger reveal">
+      <div class="pstat"><span class="pstat-n">98.6%</span><span class="pstat-l">Splash Reduction</span></div>
+      <div class="pstat"><span class="pstat-n">≤30°</span><span class="pstat-l">Max Impact Angle</span></div>
+      <div class="pstat"><span class="pstat-n">150°+</span><span class="pstat-l">Surface Contact Angle</span></div>
+      <div class="pstat"><span class="pstat-n">10yr</span><span class="pstat-l">Coating Lifespan</span></div>
+    </div>
+    <div class="prod-split">
+      <div class="prod-body reveal">
+        <p>The standard urinal today is functionally identical to the one Marcel Duchamp placed in an art gallery as a provocation in 1917. Over a century ago. <strong>Nobody has seriously tried to redesign it since.</strong></p>
+        <p>The result: 1 million litres of urine splashed onto US restroom floors every day. Bacteria concentrations around urinals exceeding those on toilet seats. The chronic smell of ammonia. A daily indignity accepted as normal.</p>
+        <p>None of it is inevitable. <strong>All of it is a design failure.</strong> And we're ending it with three interlocking technologies — precision geometry, computational fluid dynamics, and next-generation surface science.</p>
+      </div>
+      <div class="feat-list stagger reveal">
+
+        <div class="feat">
+          <div class="feat-hd"><div class="feat-icon">🐚</div><span class="feat-lbl">The Nautilus Basin</span><div class="feat-plus"></div></div>
+          <div class="feat-teaser">Logarithmic spiral — mathematically eliminates splashback at every angle</div>
+          <div class="feat-drawer"><div class="feat-body">
+            <div style="position:relative;width:100%;height:220px;margin-bottom:1.2rem;border:1px solid rgba(8,8,8,.08);background:#F5F4F0;overflow:hidden;">
+  <canvas id="fc-nautilus" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+  <div style="position:absolute;bottom:8px;left:10px;font-size:.44rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(8,8,8,.3);font-family:'DM Mono',monospace;">Top-down view — drag aim direction</div>
+  <input type="range" id="fc-naim" min="-55" max="55" value="0" style="-webkit-appearance:none;position:absolute;bottom:26px;left:10px;width:calc(100% - 20px);height:2px;background:rgba(8,8,8,.15);outline:none;cursor:pointer;">
+</div>
+            <div class="feat-pills">
+              <div class="pill"><span class="pill-n">≤30°</span><span class="pill-l">Impact Angle Guaranteed</span></div>
+              <div class="pill"><span class="pill-n">∞</span><span class="pill-l">Aim Tolerance</span></div>
+              <div class="pill"><span class="pill-n">Low</span><span class="pill-l">Accessible Lip Height</span></div>
+            </div>
+            <div class="feat-text">
+              <p>The Nautilus design solves a deceptively hard problem: how do you design a basin wall that guarantees a shallow impact angle regardless of where the stream hits — left, right, off-centre, tall user, short user?</p>
+              <p>The answer is the <strong>logarithmic spiral</strong> (r = B·exp(α/tan θ̂)). This curve appears throughout nature — nautilus shells, sunflower seeds, fern fronds — because it has a unique property: it maintains a <strong>constant angle with any line drawn from its centre</strong>. Applied to a urinal, every ray of fluid from any direction always meets the wall at the same acute, splash-preventing angle.</p>
+              <p>Unlike a flat or simply curved wall, which only works correctly from one specific position, the logarithmic spiral is <strong>forgiving by design</strong>. A user who is off-centre, slightly turned, or at an unusual height still hits the correct impact zone every time.</p>
+              <p>Critical secondary benefit: the Nautilus allows a <strong>lower lip height</strong> than traditional urinals. Traditional designs must sit high to catch the stream — but the spiral's curvature means protection starts closer to floor level, making it natively accessible to <strong>children and wheelchair users</strong> without compromise.</p>
+            </div>
+            <div>
+              <div class="feat-sub-lbl">Traditional Wall vs. Nautilus</div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Old — Wall Shape</div><div class="cmp-old">Flat or concave — fixed geometry, one correct position</div></div><div class="cmp-cell"><div class="cmp-head">New — Wall Shape</div><div class="cmp-new">Logarithmic spiral — self-correcting for any position</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Old — Impact Angle</div><div class="cmp-old">45°–90° — full splashback zone</div></div><div class="cmp-cell"><div class="cmp-head">New — Impact Angle</div><div class="cmp-new">≤30° guaranteed — fluid slides, not bounces</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Old — Accessibility</div><div class="cmp-old">High lip — fails children and wheelchair users</div></div><div class="cmp-cell"><div class="cmp-head">New — Accessibility</div><div class="cmp-new">Low-profile lip — full protection at any entry height</div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="feat">
+          <div class="feat-hd"><div class="feat-icon">🌽</div><span class="feat-lbl">The Cornucopia Profile</span><div class="feat-plus"></div></div>
+          <div class="feat-teaser">Isogonal curve geometry — 1.4% splashback vs. 100% on a standard urinal</div>
+          <div class="feat-drawer"><div class="feat-body">
+            <div style="position:relative;width:100%;height:220px;margin-bottom:1.2rem;border:1px solid rgba(8,8,8,.08);background:#F5F4F0;overflow:hidden;">
+  <canvas id="fc-corn" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+  <div style="position:absolute;bottom:8px;left:10px;font-size:.44rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(8,8,8,.3);font-family:'DM Mono',monospace;">Side view — drag height</div>
+  <input type="range" id="fc-cheight" min="30" max="100" value="65" style="-webkit-appearance:none;position:absolute;bottom:26px;left:10px;width:calc(100% - 20px);height:2px;background:rgba(8,8,8,.15);outline:none;cursor:pointer;">
+</div>
+            <div class="feat-pills">
+              <div class="pill"><span class="pill-n">1.4%</span><span class="pill-l">Splashback vs. Standard</span></div>
+              <div class="pill"><span class="pill-n">30°</span><span class="pill-l">Critical Angle</span></div>
+              <div class="pill"><span class="pill-n">r–z</span><span class="pill-l">Plane Optimised</span></div>
+            </div>
+            <div class="feat-text">
+              <p>The Cornucopia design solves the vertical plane: from above, a stream falls in a parabolic arc governed by gravity and bladder pressure. Its angle of approach relative to the basin wall changes depending on user height and distance. A standard flat wall presents a near-perpendicular surface to almost all trajectories — guaranteeing splashback.</p>
+              <p>The Cornucopia applies the <strong>isogonal curve problem</strong> to the side-view (r–z plane) cross-section. This technique defines a surface that intersects an entire <strong>family of parabolic curves</strong> — every possible urine trajectory — at a constant, acute angle of 30° or less.</p>
+              <p>The resulting profile, revolved around the vertical axis, produces a horn-like shape: deep, curved, with high swept side walls. This does two things: it redirects the primary stream downward rather than reflecting it, and the high walls catch any satellite droplets before they escape.</p>
+              <p>In controlled laboratory testing using high-speed imaging, the Cornucopia geometry alone reduced measurable splashback to <strong>just 1.4% of a standard commercial urinal</strong> — before any surface coating is applied.</p>
+            </div>
+            <div>
+              <div class="feat-sub-lbl">Why 30° Is The Critical Number</div>
+              <div class="feat-text">
+                <p>Below 30°, the stream transitions from <strong>reflection mode to redirection mode</strong>. Kinetic energy transfers along the surface downward to the drain instead of back toward the user. Satellite droplet formation essentially ceases.</p>
+                <p>Above 30° — especially approaching 90° — energy transfers backward. Droplets deform, flatten, and eject aerosol spray in all directions. Standard urinals create exactly these conditions for the vast majority of users.</p>
+              </div>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="feat">
+          <div class="feat-hd"><div class="feat-icon">🪴</div><span class="feat-lbl">SLIPS Surface Coating</span><div class="feat-plus"></div></div>
+          <div class="feat-teaser">Pitcher plant nano-coating — self-healing, pressure-stable, 10yr lifespan</div>
+          <div class="feat-drawer"><div class="feat-body">
+            <div style="position:relative;width:100%;height:220px;margin-bottom:1.2rem;border:1px solid rgba(8,8,8,.08);background:#F5F4F0;overflow:hidden;">
+  <canvas id="fc-slips" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+  <div style="position:absolute;bottom:8px;left:10px;font-size:.44rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(8,8,8,.3);font-family:'DM Mono',monospace;">Cross-section — nano-pore lubricant layer</div>
+</div>
+            <div class="feat-pills">
+              <div class="pill"><span class="pill-n">150°+</span><span class="pill-l">Water Contact Angle</span></div>
+              <div class="pill"><span class="pill-n">675atm</span><span class="pill-l">Pressure Resistance</span></div>
+              <div class="pill"><span class="pill-n">Self</span><span class="pill-l">Heals When Scratched</span></div>
+            </div>
+            <div class="feat-text">
+              <p>Once geometry has redirected 98%+ of fluid away from the user, the surface coating handles the rest. Standard porcelain is actually <strong>hydrophilic</strong> — it attracts and holds water. Urine spreads, sits, and breaks down into ammonia. That's where the smell comes from.</p>
+              <p>Standard hydrophobic coatings (inspired by the lotus leaf) create microscopic air cushions that repel water. They partially work — but a high-pressure stream can <strong>collapse the air layer permanently</strong>. Surfactants in urine further degrade the chemistry. One scratch from a cleaning brush destroys it.</p>
+              <p>Our solution draws from the <strong>pitcher plant (Nepenthes)</strong>. Instead of trapping air, it traps a thin layer of liquid lubricant in its surface pores — creating a near-frictionless interface that causes insects to slide helplessly into its digestive chamber. The liquid layer is self-renewing and cannot be permanently displaced.</p>
+              <p>SLIPS (Slippery Liquid-Infused Porous Surfaces) replicates this with a <strong>perfluorinated lubricant</strong> locked into nano-porous ceramic. Applied via kiln-aspiration and thermal curing — permanently baked into the fixture. Resistant to bleach, descaling acids, steam cleaning, and 40–70 abrasion cycles. <strong>If scratched, the lubricant flows in and self-heals.</strong></p>
+            </div>
+            <div>
+              <div class="feat-sub-lbl">Lotus Effect vs. SLIPS</div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Old — Mechanism</div><div class="cmp-old">Trapped air cushion — fragile Cassie-Baxter state</div></div><div class="cmp-cell"><div class="cmp-head">New — Mechanism</div><div class="cmp-new">Trapped liquid lubricant — cannot be displaced</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Old — Pressure</div><div class="cmp-old">Low — stream collapses air layer permanently</div></div><div class="cmp-cell"><div class="cmp-head">New — Pressure</div><div class="cmp-new">Stable to 675 atmospheres</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Old — When Scratched</div><div class="cmp-old">Permanently destroyed — no recovery</div></div><div class="cmp-cell"><div class="cmp-head">New — When Scratched</div><div class="cmp-new">Self-heals — lubricant flows into scratch</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Old — Urine Resistance</div><div class="cmp-old">Degrades — organic compounds biofoul nanostructures</div></div><div class="cmp-cell"><div class="cmp-head">New — Urine Resistance</div><div class="cmp-new">Fully resistant — repels oils, surfactants, complex fluids</div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="feat">
+          <div class="feat-hd"><div class="feat-icon">🖥️</div><span class="feat-lbl">CFD Validation</span><div class="feat-plus"></div></div>
+          <div class="feat-teaser">Aerospace-grade simulation across thousands of virtual events before any prototype</div>
+          <div class="feat-drawer"><div class="feat-body">
+            <div class="feat-pills">
+              <div class="pill"><span class="pill-n">VOF</span><span class="pill-l">Volume of Fluid</span></div>
+              <div class="pill"><span class="pill-n">SPH</span><span class="pill-l">Particle Hydrodynamics</span></div>
+              <div class="pill"><span class="pill-n">4</span><span class="pill-l">Simulation Platforms</span></div>
+            </div>
+            <div class="feat-text">
+              <p>Mathematics alone can't account for every real-world variable: flow rate variation, turbulence at stream breakup, air currents, the precise viscosity and surface tension of urine. These require simulation.</p>
+              <p><strong>Volume of Fluid (VOF) modelling</strong> tracks the free surface of the stream as it exits the body, breaks into droplets at 6–7 inches, and strikes the basin. It verifies the 30° critical angle is maintained across the full range of user positions.</p>
+              <p><strong>Smoothed Particle Hydrodynamics (SPH)</strong> models individual satellite droplets and their post-impact trajectories — revealing the invisible spray patterns that have plagued restrooms for decades. It was through SPH simulation that engineers discovered traditional urinals actually <strong>focus reflected droplets toward the centre of the user's stance</strong>.</p>
+            </div>
+            <div>
+              <div class="feat-sub-lbl">Simulation Stack</div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Platform</div><div class="cmp-old">Ansys Fluent</div></div><div class="cmp-cell"><div class="cmp-head">Role</div><div class="cmp-new">Industrial-grade turbulence modelling and VOF tracking</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Platform</div><div class="cmp-old">OpenFOAM</div></div><div class="cmp-cell"><div class="cmp-head">Role</div><div class="cmp-new">Open-source custom solver, massively parallelisable</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Platform</div><div class="cmp-old">COMSOL</div></div><div class="cmp-cell"><div class="cmp-head">Role</div><div class="cmp-new">Fluid + SLIPS coating chemistry coupling</div></div></div>
+              <div class="cmp-row"><div class="cmp-cell"><div class="cmp-head">Platform</div><div class="cmp-old">Ansys Rocky</div></div><div class="cmp-cell"><div class="cmp-head">Role</div><div class="cmp-new">GPU-accelerated satellite droplet tracking</div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="expander reveal" data-expander>
+      <div class="expander-hd">
+        <span class="expander-lbl">Why Splash Happens — And Exactly How We Stop It</span>
+        <div class="expander-plus"></div>
+      </div>
+      <div class="expander-body"><div class="expander-inner">
+      <div class="sci-wrap" style="margin-top:0;border-top:none;padding-top:1.5rem;">
+      <div class="sci-steps stagger reveal">
+        <div class="sci-step"><div class="step-n">Step 01 — The Breakup</div><div class="step-t">Droplets, Not Streams</div><p class="step-b">A urine stream exits at 2.5–3.5 m/s. Due to capillary-wave instabilities, it breaks into discrete high-velocity <strong>droplets</strong> within 6–7 inches of the body. These droplets — not the continuous stream — cause splashback when they hit a hard surface at speed.</p></div>
+        <div class="sci-step"><div class="step-n">Step 02 — The Impact</div><div class="step-t">The 90° Problem</div><p class="step-b">Traditional urinals present a near-<strong>90° flat wall</strong>. Droplets at this angle undergo massive deformation and eject satellite droplets in all directions. Physics guarantees splashback at 45°–90°. Standard urinals guarantee exactly those angles.</p></div>
+        <div class="sci-step"><div class="step-n">Step 03 — Our Fix</div><div class="step-t">The Critical Angle</div><p class="step-b">Below <strong>30°</strong>, fluid energy doesn't bounce — it slides. Our Cornucopia and Nautilus geometries mathematically guarantee every stream meets our surface at or below that threshold. SLIPS coating evacuates any remaining film to the drain instantly.</p></div>
+      </div>
+    </div>
+      </div></div>
+    </div>
+
+    <div class="expander reveal" data-expander>
+      <div class="expander-hd">
+        <span class="expander-lbl">Operational Impact</span>
+        <div class="expander-plus"></div>
+      </div>
+      <div class="expander-body"><div class="expander-inner">
+      <div class="ops-wrap" style="margin-top:0;border-top:none;padding-top:1.5rem;">
+      <div class="prod-body reveal">
+        <p><strong>For the user:</strong> you walk away dry. No checking your shoes. No carefully avoiding wet patches on the floor.</p>
+        <p><strong>For the facility manager:</strong> 50%+ reduction in janitorial labor. Floor contamination radius drops from ~0.5m to near zero. Cleaning costs fall 25–40%. The odor problem is eliminated at the source, not masked.</p>
+        <p><strong>For the building:</strong> the fixture pays for itself. Airports, stadiums, hotels, universities, transit hubs — all see compelling ROI from reduced operating costs alone.</p>
+      </div>
+    </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+<section id="geometry-explainer">
+<style>
+.geo-section-lbl{padding:2.5rem 2rem 0;font-size:.46rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(8,8,8,.4);font-family:'DM Mono',monospace;font-weight:300;}
+.geo-section-title{padding:.5rem 2rem 2rem;font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,6vw,5rem);font-weight:800;text-transform:uppercase;line-height:.88;letter-spacing:-.01em;}
+.geo-section-title em{font-style:italic;font-weight:300;}
+.geo-panel{border-top:1px solid rgba(8,8,8,.1);display:grid;grid-template-columns:1fr;}
+@media(min-width:780px){.geo-panel{grid-template-columns:1fr 340px;}}
+.geo-canvas-area{position:relative;overflow:hidden;background:#F5F4F0;height:460px;}
+.geo-canvas-area canvas{display:block;width:100%;height:100%;position:absolute;inset:0;}
+.geo-explain{border-left:1px solid rgba(8,8,8,.1);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:1.3rem;background:#EDECE8;}
+.geo-panel-hd{grid-column:1/-1;padding:1.5rem 2rem 1rem;border-bottom:1px solid rgba(8,8,8,.1);display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;}
+.geo-panel-num{font-size:.44rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(8,8,8,.35);font-family:'DM Mono',monospace;font-weight:300;}
+.geo-panel-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;}
+.geo-panel-title em{font-style:italic;font-weight:300;}
+.geo-panel-tag{font-size:.44rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(8,8,8,.1);padding:.25rem .6rem;color:rgba(8,8,8,.4);white-space:nowrap;font-family:'DM Mono',monospace;}
+.geo-body{font-size:.68rem;font-weight:300;line-height:2;color:#888;}
+.geo-body p{margin-bottom:.7rem;}.geo-body p:last-child{margin-bottom:0;}
+.geo-body strong{color:#080808;font-weight:400;}
+.geo-kbox{border:1px solid #080808;padding:.8rem .9rem;background:#F5F4F0;}
+.geo-kbox-lbl{font-size:.42rem;letter-spacing:.2em;text-transform:uppercase;color:#888;margin-bottom:.35rem;font-weight:300;font-family:'DM Mono',monospace;}
+.geo-kbox-body{font-size:.68rem;font-weight:300;line-height:1.8;font-family:'DM Mono',monospace;}
+.geo-kbox-body strong{font-weight:400;color:#080808;}
+.geo-legend{display:flex;flex-direction:column;gap:.45rem;}
+.geo-leg{display:flex;align-items:center;gap:.55rem;font-size:.5rem;font-weight:300;color:#888;font-family:'DM Mono',monospace;}
+.geo-ll{width:20px;height:2px;flex-shrink:0;border-radius:1px;}
+.geo-ld{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.geo-ctrl{display:flex;flex-direction:column;gap:.4rem;}
+.geo-ctrl-lbl{display:flex;justify-content:space-between;font-size:.46rem;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:300;font-family:'DM Mono',monospace;}
+.geo-ctrl-val{color:#080808;font-weight:400;}
+.geo-explain input[type=range]{-webkit-appearance:none;width:100%;height:2px;background:rgba(8,8,8,.15);outline:none;cursor:pointer;margin-top:6px;}
+.geo-explain input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:#080808;border-radius:50%;}
+.geo-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:700;border:1px solid rgba(8,8,8,.1);padding:.4rem .8rem;}
+.geo-badge.safe{border-color:#16a34a;color:#16a34a;}
+.geo-badge.danger{border-color:#dc2626;color:#dc2626;}
+.geo-badge-l{font-family:'DM Mono',monospace;font-size:.42rem;font-weight:300;color:#888;text-transform:uppercase;letter-spacing:.12em;}
+.geo-hint{grid-column:1/-1;padding:.8rem 2rem;border-top:1px solid rgba(8,8,8,.1);font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(8,8,8,.35);font-family:'DM Mono',monospace;}
+</style>
+
+<div class="geo-section-lbl">How It Works — Visual Science</div>
+<div class="geo-section-title">Zero Splash<br><em>Explained.</em></div>
+
+<div class="expander geo-expander" data-expander>
+  <div class="expander-hd">
+    <span class="expander-lbl">Explore 6 Interactive Visual Demos</span>
+    <div class="expander-plus"></div>
+  </div>
+  <div class="expander-body"><div class="expander-inner">
+
+<!-- ── PANEL 1: THE PROBLEM ── -->
+<div class="geo-panel">
+  <div class="geo-panel-hd">
+    <div><div class="geo-panel-num">01 / 06 — Fluid Physics</div><div class="geo-panel-title">The Problem<br>Is <em>Droplets.</em></div></div>
+    <div class="geo-panel-tag">Why aim doesn't matter</div>
+  </div>
+  <div class="geo-canvas-area"><canvas id="c0"></canvas></div>
+  <div class="geo-explain">
+    <div class="geo-body">
+      <p>Most people think splashback is an aim problem. It isn't. Even a perfectly aimed stream causes splash — because of what happens to the stream <strong>before it hits the wall.</strong></p>
+      <p>About 6–7 inches outside the body, the smooth stream breaks into <strong>discrete high-velocity droplets</strong> due to capillary wave instabilities — the same physics that makes a tap drip.</p>
+      <p>It's these droplets — not the stream — that cause splashback. A small fast droplet hitting a hard surface head-on <strong>explodes outward</strong> in all directions.</p>
+    </div>
+    <div class="geo-kbox"><div class="geo-kbox-lbl">Key Insight</div><div class="geo-kbox-body">Splashback is a <strong>droplet impact problem.</strong> The fix is in wall geometry — not user behaviour.</div></div>
+    <div class="geo-legend">
+      <div class="geo-leg"><div class="geo-ll" style="background:#2563eb"></div>Continuous stream</div>
+      <div class="geo-leg"><div class="geo-ld" style="background:#2563eb"></div>Droplets after breakup (~7in)</div>
+      <div class="geo-leg"><div class="geo-ld" style="background:#dc2626"></div>Splash particles on impact</div>
+    </div>
+  </div>
+  <div class="geo-hint">Watch the stream break apart — then explode on impact</div>
+</div>
+
+<!-- ── PANEL 2: FLAT WALL ── -->
+<div class="geo-panel">
+  <div class="geo-panel-hd">
+    <div><div class="geo-panel-num">02 / 06 — Impact Geometry</div><div class="geo-panel-title">Flat Walls<br><em>Guarantee</em> Splashback.</div></div>
+    <div class="geo-panel-tag">Why traditional urinals fail</div>
+  </div>
+  <div class="geo-canvas-area"><canvas id="c1"></canvas></div>
+  <div class="geo-explain">
+    <div class="geo-body">
+      <p>A standard urinal has a near-vertical flat back wall. A parabolic stream hits it at <strong>45°–90°</strong> — deep in the splashback zone.</p>
+      <p>At these steep angles, kinetic energy has nowhere to go except <strong>back toward the user.</strong> Drag the user closer and watch the red particles land on them.</p>
+      <p>This is <strong>geometrically unavoidable</strong> with any flat vertical surface — no matter the material.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:.9rem;">
+      <div class="geo-ctrl"><div class="geo-ctrl-lbl"><span>User height</span><span class="geo-ctrl-val" id="s1hl">1.7m</span></div><input type="range" id="s1h" min="40" max="100" value="70"></div>
+      <div class="geo-ctrl"><div class="geo-ctrl-lbl"><span>Distance from wall</span><span class="geo-ctrl-val" id="s1dl">50cm</span></div><input type="range" id="s1d" min="10" max="85" value="50"></div>
+    </div>
+    <div id="s1badge" class="geo-badge danger"><span id="s1av">72°</span><span class="geo-badge-l">Impact<br>Angle</span></div>
+    <div class="geo-legend">
+      <div class="geo-leg"><div class="geo-ll" style="background:#2563eb"></div>Stream arc</div>
+      <div class="geo-leg"><div class="geo-ll" style="background:#dc2626"></div>Splashback hitting user</div>
+    </div>
+  </div>
+  <div class="geo-hint">Drag user closer to wall — watch splash land on them</div>
+</div>
+
+<!-- ── PANEL 3: CRITICAL ANGLE ── -->
+<div class="geo-panel">
+  <div class="geo-panel-hd">
+    <div><div class="geo-panel-num">03 / 06 — The Critical Threshold</div><div class="geo-panel-title">Below 30°<br>Fluid <em>Slides.</em> Not Bounces.</div></div>
+    <div class="geo-panel-tag">The physics of 30°</div>
+  </div>
+  <div class="geo-canvas-area"><canvas id="c2"></canvas></div>
+  <div class="geo-explain">
+    <div class="geo-body">
+      <p>There is a physical threshold at <strong>approximately 30°</strong> impact angle confirmed by high-speed lab testing.</p>
+      <p><strong>Above 30°:</strong> droplet energy bounces back. Satellite spray. Splashback.</p>
+      <p><strong>Below 30°:</strong> energy transfers along the surface toward the drain. No rebound. No spray.</p>
+    </div>
+    <div class="geo-ctrl"><div class="geo-ctrl-lbl"><span>Impact angle</span><span class="geo-ctrl-val" id="s2al">45°</span></div><input type="range" id="s2a" min="5" max="85" value="45"></div>
+    <div id="s2badge" class="geo-badge danger"><span id="s2av">45°</span><span class="geo-badge-l">Impact<br>Angle</span></div>
+    <div class="geo-kbox"><div class="geo-kbox-lbl">The Design Goal</div><div class="geo-kbox-body">Build a wall where <strong>every possible stream hits at ≤30°.</strong></div></div>
+  </div>
+  <div class="geo-hint">Drag across the 30° threshold — watch behaviour flip</div>
+</div>
+
+<!-- ── PANEL 4: CORNUCOPIA ── -->
+<div class="geo-panel">
+  <div class="geo-panel-hd">
+    <div><div class="geo-panel-num">04 / 06 — Vertical Geometry</div><div class="geo-panel-title">The Cornucopia<br><em>Curves</em> The Wall.</div></div>
+    <div class="geo-panel-tag">Solving the parabola problem</div>
+  </div>
+  <div class="geo-canvas-area"><canvas id="c3"></canvas></div>
+  <div class="geo-explain">
+    <div class="geo-body">
+      <p>A stream follows a <strong>parabolic arc</strong> — gravity pulls it down. Taller users produce steeper arcs; shorter users produce flatter ones.</p>
+      <p>The Cornucopia is derived by solving differential equations — finding the exact curve that intersects the entire <em>family</em> of parabolic arcs at a constant ≤30°.</p>
+      <p>The wall <strong>leans forward at the top</strong> and <strong>curves back at the base.</strong> Every height. Every arc. Always ≤30°.</p>
+    </div>
+    <div class="geo-ctrl"><div class="geo-ctrl-lbl"><span>User height</span><span class="geo-ctrl-val" id="s3hl">1.7m</span></div><input type="range" id="s3h" min="30" max="100" value="65"></div>
+    <div class="geo-legend">
+      <div class="geo-leg"><div class="geo-ll" style="background:#2563eb;opacity:.35"></div>Short user arc</div>
+      <div class="geo-leg"><div class="geo-ll" style="background:#2563eb;opacity:.65"></div>Average user arc</div>
+      <div class="geo-leg"><div class="geo-ll" style="background:#2563eb"></div>Tall user arc</div>
+      <div class="geo-leg"><div class="geo-ld" style="background:#16a34a"></div>All impacts ≤30°</div>
+    </div>
+  </div>
+  <div class="geo-hint">Change height — all arcs still hit shallowly</div>
+</div>
+
+<!-- ── PANEL 5: NAUTILUS ── -->
+<div class="geo-panel">
+  <div class="geo-panel-hd">
+    <div><div class="geo-panel-num">05 / 06 — Horizontal Geometry</div><div class="geo-panel-title">The Nautilus<br>Fixes <em>Left / Right</em> Aim.</div></div>
+    <div class="geo-panel-tag">Top-down view</div>
+  </div>
+  <div class="geo-canvas-area"><canvas id="c4"></canvas></div>
+  <div class="geo-explain">
+    <div class="geo-body">
+      <p>The Cornucopia fixes the <strong>vertical</strong> arc problem. But a user off-centre or turned hits a different wall angle.</p>
+      <p>Viewed from above, the basin follows a logarithmic spiral — the only curve where <strong>every line from the centre hits the wall at the same angle,</strong> regardless of direction.</p>
+      <p>Aim left, right, dead centre — the impact angle never changes. <strong>Self-correcting by geometry.</strong></p>
+    </div>
+    <div class="geo-ctrl"><div class="geo-ctrl-lbl"><span>Aim direction</span><span class="geo-ctrl-val" id="s4al">Centre</span></div><input type="range" id="s4a" min="-55" max="55" value="0"></div>
+    <div id="s4badge" class="geo-badge safe"><span id="s4av">28°</span><span class="geo-badge-l">Impact<br>Angle</span></div>
+    <div class="geo-legend">
+      <div class="geo-leg"><div class="geo-ll" style="background:#2563eb"></div>Stream ray (top-down)</div>
+      <div class="geo-leg"><div class="geo-ll" style="background:#080808;height:3px"></div>Nautilus spiral wall</div>
+      <div class="geo-leg"><div class="geo-ld" style="background:#16a34a"></div>Impact point (always ≤30°)</div>
+    </div>
+  </div>
+  <div class="geo-hint">Drag aim direction — impact angle stays constant</div>
+</div>
+
+<!-- ── PANEL 6: TOGETHER ── -->
+<div class="geo-panel">
+  <div class="geo-panel-hd">
+    <div><div class="geo-panel-num">06 / 06 — The Complete System</div><div class="geo-panel-title">Three Layers.<br><em>Zero</em> Splash.</div></div>
+    <div class="geo-panel-tag">98.6% reduction</div>
+  </div>
+  <div class="geo-canvas-area"><canvas id="c5"></canvas></div>
+  <div class="geo-explain">
+    <div class="geo-body"><p>No single geometry solves everything. Each layer closes the gap the others leave open.</p></div>
+    <div style="display:flex;flex-direction:column;gap:.65rem;">
+      <div class="geo-kbox"><div class="geo-kbox-lbl">Layer 1 — Cornucopia Profile</div><div class="geo-kbox-body">Solves <strong>vertical arc variation.</strong> All heights — all hit ≤30°.</div></div>
+      <div class="geo-kbox"><div class="geo-kbox-lbl">Layer 2 — Nautilus Spiral</div><div class="geo-kbox-body">Solves <strong>horizontal aim variation.</strong> Any direction — all hit ≤30°.</div></div>
+      <div class="geo-kbox"><div class="geo-kbox-lbl">Layer 3 — SLIPS Coating</div><div class="geo-kbox-body">Catches the <strong>residual 1.4%.</strong> Fluid slides instantly to drain.</div></div>
+    </div>
+    <div class="geo-badge safe"><span>98.6%</span><span class="geo-badge-l">Splash<br>Reduction</span></div>
+  </div>
+  <div class="geo-hint">All three layers — every stream redirected to the drain</div>
+</div>
+
+  </div></div>
+</div>
+
+<script>
+(function(){
+const PI=Math.PI,TAU=PI*2;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+
+function setupCanvas(id){
+  const c=document.getElementById(id);
+  if(!c)return null;
+  function r(){c.width=c.parentElement.clientWidth;c.height=c.parentElement.clientHeight;}
+  r();window.addEventListener('resize',r);
+  return c;
+}
+function drawGrid(ctx,W,H){
+  ctx.save();ctx.strokeStyle='rgba(8,8,8,.04)';ctx.lineWidth=1;
+  for(let x=0;x<W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  for(let y=0;y<H;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+  ctx.restore();
+}
+function lbl(ctx,txt,x,y,col,sz){
+  col=col||'rgba(8,8,8,.38)';sz=sz||10;
+  ctx.save();ctx.font=sz+'px "DM Mono",monospace';ctx.fillStyle=col;ctx.fillText(txt,x,y);ctx.restore();
+}
+function drawUser(ctx,ux,uy,heightM,hitPts){
+  ctx.save();ctx.strokeStyle='rgba(8,8,8,.5)';ctx.lineWidth=1.8;
+  ctx.beginPath();ctx.arc(ux,uy-22,9,0,TAU);ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(ux,uy-13);ctx.lineTo(ux,uy+12);
+  ctx.moveTo(ux-10,uy-2);ctx.lineTo(ux+10,uy-2);
+  ctx.moveTo(ux,uy+12);ctx.lineTo(ux-7,uy+30);
+  ctx.moveTo(ux,uy+12);ctx.lineTo(ux+7,uy+30);
+  ctx.stroke();
+  lbl(ctx,heightM+'m',ux+13,uy+4,'rgba(8,8,8,.4)',10);
+  ctx.restore();
+  if(hitPts&&hitPts.length){
+    hitPts.forEach(function(p){
+      if(p.life<=0)return;
+      ctx.beginPath();ctx.arc(p.x,p.y,4*p.life,0,TAU);
+      ctx.fillStyle='rgba(220,38,38,'+p.life*0.9+')';ctx.fill();
+    });
+  }
+}
+
+// SLIDE 0 — DROPLET BREAKUP
+// ══════════════════════════════════════════
+(()=>{
+  const c=setupCanvas('c0');
+  const ctx=c.getContext('2d');
+  let splashPts=[],splashActive=false;
+
+  function draw(ts){
+    requestAnimationFrame(draw);
+    const t=ts/1000;
+    const W=c.width,H=c.height;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H);
+
+    const wallX=W*0.74;
+    const sx=W*0.1,sy=H*0.44;
+    const breakX=sx+(wallX-sx)*0.38;
+    const impX=wallX-2,impY=sy+H*0.13;
+
+    // Wall
+    ctx.fillStyle='rgba(8,8,8,.05)';ctx.fillRect(wallX,H*0.1,W-wallX,H*0.82);
+    ctx.strokeStyle='rgba(8,8,8,.8)';ctx.lineWidth=3;
+    ctx.beginPath();ctx.moveTo(wallX,H*0.1);ctx.lineTo(wallX,H*0.92);ctx.stroke();
+    for(let i=0;i<H;i+=14){ctx.strokeStyle='rgba(8,8,8,.1)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(wallX,H*0.1+i);ctx.lineTo(wallX+11,H*0.1+i-11);ctx.stroke();}
+
+    const PERIOD=2.6;
+    const phase=(t%PERIOD)/PERIOD;
+    const dt2=0.016;
+
+    // Stream (smooth section)
+    const streamEnd=Math.min(phase*2.8,1)*0.38;
+    ctx.beginPath();ctx.moveTo(sx,sy);
+    for(let i=0;i<=30;i++){
+      const p=i/30*streamEnd;
+      ctx.lineTo(sx+(wallX-sx)*p, sy+(impY-sy)*(p*p*0.6+p*0.4));
+    }
+    const g=ctx.createLinearGradient(sx,sy,breakX,impY);
+    g.addColorStop(0,'rgba(37,99,235,0)');g.addColorStop(0.5,'rgba(37,99,235,.7)');g.addColorStop(1,'rgba(37,99,235,.9)');
+    ctx.strokeStyle=g;ctx.lineWidth=3;ctx.stroke();
+
+    // Breakup marker
+    if(phase>0.12){
+      ctx.save();ctx.strokeStyle='rgba(8,8,8,.2)';ctx.lineWidth=1;ctx.setLineDash([3,3]);
+      ctx.beginPath();ctx.moveTo(breakX,H*0.18);ctx.lineTo(breakX,H*0.72);ctx.stroke();ctx.setLineDash([]);
+      lbl(ctx,'Breakup point',breakX+5,H*0.21,'rgba(8,8,8,.35)',9);
+      lbl(ctx,'~7 inches',breakX+5,H*0.31,'rgba(8,8,8,.25)',9);
+      ctx.restore();
+    }
+
+    // Droplets
+    if(phase>0.15){
+      const dp=(phase-0.15)/0.85;
+      const nDrops=7;
+      for(let i=0;i<nDrops;i++){
+        const tp=clamp(dp-i*0.1,0,1);
+        if(tp<=0)continue;
+        const prog=0.38+tp*0.62;
+        const bx=sx+(wallX-sx)*prog;
+        const by=sy+(impY-sy)*(prog*prog*0.6+prog*0.4);
+        ctx.beginPath();ctx.arc(bx,by,4+i*0.3,0,TAU);
+        ctx.fillStyle=`rgba(37,99,235,${0.5+tp*0.4})`;ctx.fill();
+      }
+    }
+
+    // Impact splash
+    if(phase>0.87){
+      if(!splashActive){
+        splashActive=true;splashPts=[];
+        for(let i=0;i<20;i++){
+          const a=PI*0.08+(Math.random()-0.5)*PI*1.0;
+          const spd=55+Math.random()*85;
+          splashPts.push({x:impX,y:impY,vx:Math.cos(a)*spd,vy:Math.sin(a)*spd,life:1,ml:0.3+Math.random()*0.25,sz:2+Math.random()*3});
+        }
+      }
+    } else { splashActive=false; }
+
+    splashPts.forEach(p=>{
+      p.x+=p.vx*dt2;p.y+=p.vy*dt2;p.vy+=220*dt2;p.life-=dt2/p.ml;
+      if(p.life<=0)return;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.sz*p.life,0,TAU);
+      ctx.fillStyle=`rgba(220,38,38,${p.life*.85})`;ctx.fill();
+    });
+    splashPts=splashPts.filter(p=>p.life>0);
+
+    // User
+    drawUser(ctx,sx,sy,(1.7).toFixed(1),[]);
+    lbl(ctx,'Wall',wallX+7,H*0.2,'rgba(8,8,8,.35)',10);
+  }
+  requestAnimationFrame(draw);
+})();
+
+// ══════════════════════════════════════════
+// SLIDE 1 — FLAT WALL + USER SPLASH
+// ══════════════════════════════════════════
+(()=>{
+  const c=setupCanvas('c1');
+  const ctx=c.getContext('2d');
+  let uH=0.7,uD=0.5;
+  let streamPhase=0,lastT=performance.now();
+  let splashPts=[],userHitPts=[],splashTimer=0;
+
+  document.getElementById('s1h').addEventListener('input',function(){
+    uH=this.value/100;
+    document.getElementById('s1hl').textContent=(1.4+uH*0.6).toFixed(1)+'m';
+    streamPhase=0;splashPts=[];userHitPts=[];splashTimer=0;
+  });
+  document.getElementById('s1d').addEventListener('input',function(){
+    uD=this.value/100;
+    document.getElementById('s1dl').textContent=Math.round(20+uD*55)+'cm';
+    streamPhase=0;splashPts=[];userHitPts=[];splashTimer=0;
+  });
+
+  function impactAngle(h,d){return clamp(40+h*22+d*8,40,86);}
+
+  function draw(ts){
+    requestAnimationFrame(draw);
+    const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;
+    const W=c.width,H=c.height;
+    ctx.clearRect(0,0,W,H);drawGrid(ctx,W,H);
+
+    const wallX=W*0.78;
+    // User position: farther right when uD is high (close to wall)
+    const ux=W*(0.06+uD*0.38), uy=H*(0.28+uH*0.18);
+    const impY=H*(0.32+uH*0.2+(1-uD)*0.06);
+    const impX=wallX-3;
+
+    // Wall
+    ctx.fillStyle='rgba(8,8,8,.05)';ctx.fillRect(wallX,H*0.1,W-wallX,H*0.82);
+    ctx.strokeStyle='rgba(8,8,8,.85)';ctx.lineWidth=3;
+    ctx.beginPath();ctx.moveTo(wallX,H*0.1);ctx.lineTo(wallX,H*0.9);ctx.stroke();
+    for(let i=0;i<H;i+=14){ctx.strokeStyle='rgba(8,8,8,.1)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(wallX,H*0.1+i);ctx.lineTo(wallX+11,H*0.1+i-11);ctx.stroke();}
+
+    // Stream
+    streamPhase=Math.min(streamPhase+dt*0.75,1);
+    ctx.beginPath();
+    for(let i=0;i<=50;i++){
+      const p=i/50*streamPhase;
+      const x=ux+(impX-ux)*p;
+      const y=uy+(impY-uy)*(p*p*0.65+p*0.35);
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle='rgba(37,99,235,.8)';ctx.lineWidth=2.5;ctx.stroke();
+
+    // Impact effects
+    const ia=impactAngle(uH,uD);
+    document.getElementById('s1av').textContent=ia.toFixed(0)+'°';
+    document.getElementById('s1badge').className='abadge '+(ia<=30?'safe':'danger');
+
+    if(streamPhase>=0.99){
+      // Normal dashed line
+      ctx.save();ctx.strokeStyle='rgba(8,8,8,.28)';ctx.lineWidth=1;ctx.setLineDash([4,3]);
+      ctx.beginPath();ctx.moveTo(impX-60,impY);ctx.lineTo(impX+20,impY);ctx.stroke();ctx.setLineDash([]);
+      lbl(ctx,'normal',impX-58,impY-5,'rgba(8,8,8,.28)',9);
+
+      // Angle arc
+      const iaR=ia*PI/180;
+      ctx.strokeStyle='rgba(220,38,38,.75)';ctx.lineWidth=1.8;
+      ctx.beginPath();ctx.arc(impX,impY,38,PI-iaR,PI);ctx.stroke();
+      lbl(ctx,ia.toFixed(0)+'°',impX-58,impY-15,'rgba(220,38,38,.85)',12);
+      ctx.restore();
+
+      // Splash generation
+      splashTimer+=dt;
+      if(splashTimer>0.7){
+        splashTimer=0;splashPts=[];userHitPts=[];
+        const nSplash=16;
+        // Direction of incoming stream at impact
+        const inDx=impX-ux,inDy=impY-uy;
+        const inLen=Math.hypot(inDx,inDy);
+        const inNx=inDx/inLen,inNy=inDy/inLen;
+        for(let i=0;i<nSplash;i++){
+          // Reflect off flat wall: wall normal is (-1,0)
+          const a=PI*0.06+(Math.random()-0.5)*PI*1.1;
+          const spd=50+Math.random()*90;
+          splashPts.push({x:impX,y:impY,vx:Math.cos(a)*spd,vy:Math.sin(a)*spd,life:1,ml:0.45+Math.random()*0.3,sz:2.5+Math.random()*2.5});
+        }
+        streamPhase=0;
+      }
+    }
+
+    // Animate splash, detect hits on user body
+    const bodyMinX=ux-14,bodyMaxX=ux+14,bodyMinY=uy-32,bodyMaxY=uy+32;
+    splashPts.forEach(p=>{
+      p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=200*dt;p.life-=dt/p.ml;
+      if(p.life<=0)return;
+      // Check if this particle is on the user
+      if(p.x>bodyMinX&&p.x<bodyMaxX&&p.y>bodyMinY&&p.y<bodyMaxY&&p.life>0.3){
+        userHitPts.push({x:p.x,y:p.y,life:1,ml:0.6});
+        p.life=0;// absorb
+      }
+      ctx.beginPath();ctx.arc(p.x,p.y,p.sz*p.life,0,TAU);
+      ctx.fillStyle=`rgba(220,38,38,${p.life*.8})`;ctx.fill();
+    });
+    splashPts=splashPts.filter(p=>p.life>0);
+
+    // User hit glow particles
+    userHitPts.forEach(p=>{p.life-=dt/p.ml;});
+    userHitPts=userHitPts.filter(p=>p.life>0);
+
+    // Draw user (with hit pts)
+    drawUser(ctx,ux,uy,(1.4+uH*0.6).toFixed(1),userHitPts);
+
+    // Distance line
+    ctx.save();ctx.strokeStyle='rgba(8,8,8,.15)';ctx.lineWidth=1;ctx.setLineDash([3,3]);
+    ctx.beginPath();ctx.moveTo(ux,H*0.88);ctx.lineTo(wallX,H*0.88);ctx.stroke();ctx.setLineDash([]);
+    lbl(ctx,Math.round(20+uD*55)+'cm',lerp(ux,wallX,0.5)-12,H*0.86,'rgba(8,8,8,.3)',9);
+    ctx.restore();
+
+    lbl(ctx,'Wall',wallX+7,H*0.18,'rgba(8,8,8,.35)',10);
+
+    // Splash zone warning if close
+    if(uD>0.6){
+      ctx.save();
+      ctx.font='bold 11px "Barlow Condensed",sans-serif';
+      ctx.fillStyle='rgba(220,38,38,.7)';
+      ctx.fillText('⚠ SPLASH ZONE',ux-20,uy-50);
+      ctx.restore();
+    }
+  }
+  requestAnimationFrame(draw);
+})();
+
+// ══════════════════════════════════════════
+// SLIDE 2 — CRITICAL ANGLE
+// ══════════════════════════════════════════
+(()=>{
+  const c=setupCanvas('c2');
+  const ctx=c.getContext('2d');
+  let angleDeg=45,lastT=performance.now();
+  let streamPhase=0,splashPts=[],splashTimer=0;
+
+  document.getElementById('s2a').addEventListener('input',function(){
+    angleDeg=+this.value;
+    document.getElementById('s2al').textContent=angleDeg+'°';
+    document.getElementById('s2av').textContent=angleDeg+'°';
+    document.getElementById('s2badge').className='abadge '+(angleDeg<=30?'safe':'danger');
+    streamPhase=0;splashPts=[];splashTimer=0;
+  });
+
+  function draw(ts){
+    requestAnimationFrame(draw);
+    const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;
+    const W=c.width,H=c.height;
+    ctx.clearRect(0,0,W,H);drawGrid(ctx,W,H);
+    const safe=angleDeg<=30;
+    const wallX=W*0.62,impX=wallX-2,impY=H*0.5;
+    const startX=W*0.08,startY=H*0.5;
+
+    // Wall
+    ctx.fillStyle='rgba(8,8,8,.05)';ctx.fillRect(wallX,H*0.12,W-wallX,H*0.78);
+    ctx.strokeStyle='rgba(8,8,8,.8)';ctx.lineWidth=3;
+    ctx.beginPath();ctx.moveTo(wallX,H*0.12);ctx.lineTo(wallX,H*0.9);ctx.stroke();
+
+    // 30° threshold line on wall
+    ctx.save();ctx.strokeStyle='rgba(8,8,8,.25)';ctx.lineWidth=1;ctx.setLineDash([4,3]);
+    const tRad=30*PI/180;
+    ctx.beginPath();ctx.moveTo(impX,impY);ctx.lineTo(impX-90*Math.cos(PI-tRad),impY-90*Math.sin(PI-tRad));ctx.stroke();
+    ctx.setLineDash([]);
+    lbl(ctx,'30° threshold',impX-88,impY-50,'rgba(8,8,8,.32)',9);
+    ctx.restore();
+
+    // Stream
+    streamPhase=Math.min(streamPhase+dt,1);
+    const ex=lerp(startX,impX,streamPhase),ey=lerp(startY,impY,streamPhase);
+    ctx.beginPath();ctx.moveTo(startX,startY);ctx.lineTo(ex,ey);
+    ctx.strokeStyle='rgba(37,99,235,.85)';ctx.lineWidth=3;ctx.stroke();
+    ctx.beginPath();ctx.arc(ex,ey,4,0,TAU);ctx.fillStyle='rgba(37,99,235,.9)';ctx.fill();
+
+    if(streamPhase>=0.99){
+      // Normal
+      ctx.save();ctx.strokeStyle='rgba(8,8,8,.25)';ctx.lineWidth=1;ctx.setLineDash([4,3]);
+      ctx.beginPath();ctx.moveTo(impX-70,impY);ctx.lineTo(impX+15,impY);ctx.stroke();ctx.setLineDash([]);
+      ctx.restore();
+
+      // Angle arc
+      const aRad=angleDeg*PI/180;
+      ctx.save();ctx.strokeStyle=safe?'rgba(22,163,74,.85)':'rgba(220,38,38,.85)';ctx.lineWidth=2;
+      ctx.beginPath();ctx.arc(impX,impY,44,PI-aRad,PI);ctx.stroke();
+      lbl(ctx,angleDeg+'°',impX-68,impY-18,safe?'rgba(22,163,74,.9)':'rgba(220,38,38,.9)',14);
+      ctx.restore();
+
+      splashTimer+=dt;
+      if(splashTimer>0.55){
+        splashTimer=0;splashPts=[];
+        if(safe){
+          // Slides down wall
+          for(let i=0;i<6;i++){
+            splashPts.push({x:impX,y:impY,vx:-1-Math.random()*2,vy:12+i*8+Math.random()*10,life:1,ml:0.8,safe:true,sz:2});
+          }
+        } else {
+          // Explodes back
+          for(let i=0;i<18;i++){
+            const a=PI*0.08+(Math.random()-0.5)*PI;
+            const spd=45+Math.random()*80;
+            splashPts.push({x:impX,y:impY,vx:Math.cos(a)*spd,vy:Math.sin(a)*spd,life:1,ml:0.38+Math.random()*0.22,safe:false,sz:2.5+Math.random()*2});
+          }
+        }
+        streamPhase=0;
+      }
+
+      splashPts.forEach(p=>{
+        p.x+=p.vx*dt;p.y+=p.vy*dt;if(!p.safe)p.vy+=180*dt;p.life-=dt/p.ml;
+        if(p.life<=0)return;
+        ctx.beginPath();ctx.arc(p.x,p.y,p.sz*p.life,0,TAU);
+        ctx.fillStyle=p.safe?`rgba(22,163,74,${p.life*.8})`:`rgba(220,38,38,${p.life*.85})`;ctx.fill();
+      });
+      splashPts=splashPts.filter(p=>p.life>0);
+
+      // Result text
+      ctx.save();ctx.font='bold 14px "Barlow Condensed",sans-serif';
+      ctx.fillStyle=safe?'rgba(22,163,74,.9)':'rgba(220,38,38,.9)';
+      ctx.fillText(safe?'✓ SLIDES TO DRAIN':'✗ BOUNCES BACK',impX+16,impY+(safe?35:-22));
+      ctx.restore();
+    }
+    lbl(ctx,'Incoming →',startX,startY-10,'rgba(8,8,8,.3)',9);
+    lbl(ctx,'Surface',wallX+6,H*0.18,'rgba(8,8,8,.35)',10);
+  }
+  requestAnimationFrame(draw);
+})();
+
+// ══════════════════════════════════════════
+// SLIDE 3 — CORNUCOPIA
+// ══════════════════════════════════════════
+(()=>{
+  const c=setupCanvas('c3');
+  const ctx=c.getContext('2d');
+  let uH=0.65,lastT=performance.now();
+
+  document.getElementById('s3h').addEventListener('input',function(){
+    uH=this.value/100;
+    document.getElementById('s3hl').textContent=(1.4+uH*0.6).toFixed(1)+'m';
+  });
+
+  function cornWall(W,H){
+    const pts=[];
+    for(let i=0;i<=80;i++){
+      const t=i/80;
+      const lean=Math.pow(1-t,1.8)*W*0.12;
+      const pullback=Math.pow(t,1.4)*W*0.04;
+      pts.push({x:W*0.70-lean+pullback,y:H*0.07+t*H*0.86,t});
+    }
+    return pts;
+  }
+
+  function getArc(h,W,H,wall){
+    const ux=W*0.1,uy=H*(0.22+(1-h)*0.32);
+    const tx=W*0.62,ty=H*(0.40+(1-h)*0.22);
+    const arcPts=[];
+    for(let i=0;i<=60;i++){
+      const p=i/60;
+      arcPts.push({x:lerp(ux,tx,p),y:lerp(uy,ty,p*p*0.7+p*0.3)});
+    }
+    // Find intersection
+    let hit=null;
+    outer: for(let i=0;i<arcPts.length-1;i++){
+      for(let j=0;j<wall.length-1;j++){
+        const p=arcPts[i],q=arcPts[i+1],a=wall[j],b=wall[j+1];
+        const dx1=q.x-p.x,dy1=q.y-p.y,dx2=b.x-a.x,dy2=b.y-a.y;
+        const denom=dx1*dy2-dy1*dx2;
+        if(Math.abs(denom)<0.01)continue;
+        const t1=((a.x-p.x)*dy2-(a.y-p.y)*dx2)/denom;
+        const t2=((a.x-p.x)*dy1-(a.y-p.y)*dx1)/denom;
+        if(t1>=0&&t1<=1&&t2>=0&&t2<=1){
+          hit={x:lerp(p.x,q.x,t1),y:lerp(p.y,q.y,t1)};break outer;
+        }
+      }
+    }
+    return{arcPts,hit,ux,uy};
+  }
+
+  const bgHeights=[0.2,0.5,0.85];
+  let phases=[0,0,0,0],spawnT=0;
+  let activeStreams=[];// {pts,hit,phase,h,opacity}
+
+  function draw(ts){
+    requestAnimationFrame(draw);
+    const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;
+    const W=c.width,H=c.height;
+    ctx.clearRect(0,0,W,H);drawGrid(ctx,W,H);
+
+    const wall=cornWall(W,H);
+
+    // Wall fill
+    ctx.beginPath();wall.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+    ctx.lineTo(W,H*.93);ctx.lineTo(W,H*.07);ctx.closePath();
+    ctx.fillStyle='rgba(8,8,8,.05)';ctx.fill();
+    // Wall stroke
+    ctx.beginPath();wall.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+    ctx.strokeStyle='rgba(8,8,8,.9)';ctx.lineWidth=3;ctx.stroke();
+
+    // Normals
+    ctx.save();ctx.strokeStyle='rgba(8,8,8,.13)';ctx.lineWidth=1;
+    for(let i=3;i<wall.length-3;i+=8){
+      const p=wall[i],q=wall[i+1]||wall[i];
+      const tx2=q.x-p.x,ty2=q.y-p.y,tl=Math.hypot(tx2,ty2);
+      const nx=-ty2/tl,ny=tx2/tl;
+      ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x+nx*16,p.y+ny*16);ctx.stroke();
+    }
+    ctx.restore();
+
+    // Background arcs (faint — show family of trajectories)
+    bgHeights.forEach((bh,bi)=>{
+      const arc=getArc(bh,W,H,wall);
+      const op=[0.2,0.35,0.5][bi];
+      ctx.beginPath();arc.arcPts.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+      ctx.strokeStyle=`rgba(37,99,235,${op})`;ctx.lineWidth=1.5;ctx.stroke();
+      if(arc.hit){
+        ctx.beginPath();ctx.arc(arc.hit.x,arc.hit.y,4,0,TAU);
+        ctx.fillStyle=`rgba(22,163,74,${op+0.3})`;ctx.fill();
+      }
+    });
+
+    // Active user arc (selected height)
+    spawnT+=dt;
+    if(spawnT>1.2){spawnT=0;
+      const arc=getArc(uH,W,H,wall);
+      activeStreams.push({arcPts:arc.arcPts,hit:arc.hit,ux:arc.ux,uy:arc.uy,phase:0,h:uH,splashPts:[]});
+    }
+    activeStreams=activeStreams.filter(s=>s.age<2);
+    activeStreams.forEach(s=>{
+      s.phase=Math.min((s.phase||0)+dt*0.9,1);
+      s.age=(s.age||0)+dt;
+      const nPts=Math.floor(s.arcPts.length*s.phase);
+      ctx.beginPath();s.arcPts.slice(0,nPts).forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+      ctx.strokeStyle='rgba(37,99,235,.9)';ctx.lineWidth=2.5;ctx.stroke();
+      if(s.phase>=1&&s.hit){
+        // Impact dot
+        ctx.beginPath();ctx.arc(s.hit.x,s.hit.y,7,0,TAU);ctx.fillStyle='rgba(22,163,74,.9)';ctx.fill();
+        // Angle indicator
+        ctx.save();ctx.strokeStyle='rgba(22,163,74,.7)';ctx.lineWidth=1.5;
+        ctx.beginPath();ctx.arc(s.hit.x,s.hit.y,22,PI*0.65,PI*0.92);ctx.stroke();
+        lbl(ctx,'≤30°',s.hit.x-46,s.hit.y-8,'rgba(22,163,74,.9)',11);
+        ctx.restore();
+        // Slide down particles
+        if(!s.spawned){s.spawned=true;
+          for(let i=0;i<5;i++)s.splashPts.push({x:s.hit.x,y:s.hit.y,vx:-2-Math.random()*3,vy:10+i*6,life:1,ml:.7});
+        }
+      }
+      s.splashPts.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=120*dt;p.life-=dt/p.ml;
+        if(p.life<=0)return;
+        ctx.beginPath();ctx.arc(p.x,p.y,3*p.life,0,TAU);ctx.fillStyle=`rgba(22,163,74,${p.life*.7})`;ctx.fill();
+      });
+    });
+
+    // User
+    const ux=W*0.1,uy=H*(0.22+(1-uH)*0.32);
+    drawUser(ctx,ux,uy,(1.4+uH*0.6).toFixed(1),[]);
+
+    // Labels
+    lbl(ctx,'Cornucopia Wall',W*0.62,H*0.06,'rgba(8,8,8,.4)',10);
+    lbl(ctx,'← leans fwd at top',W*0.44,H*0.14,'rgba(8,8,8,.22)',9);
+    lbl(ctx,'← curves back at base',W*0.44,H*0.82,'rgba(8,8,8,.22)',9);
+  }
+  requestAnimationFrame(draw);
+})();
+
+// ══════════════════════════════════════════
+// SLIDE 4 — NAUTILUS TOP-DOWN
+// ══════════════════════════════════════════
+(()=>{
+  const c=setupCanvas('c4');
+  const ctx=c.getContext('2d');
+  let aimDeg=0,lastT=performance.now();
+  let streamPhase=0,slidePts=[];
+
+  document.getElementById('s4a').addEventListener('input',function(){
+    aimDeg=+this.value;
+    const a=Math.abs(aimDeg);
+    document.getElementById('s4al').textContent=a<4?'Centre':(aimDeg<0?'Left ':'Right ')+a+'°';
+    streamPhase=0;slidePts=[];
+  });
+
+  function spiralPt(alpha,B,theta){
+    const r=B*Math.exp(alpha/Math.tan(theta));
+    return{x:r*Math.cos(alpha),y:r*Math.sin(alpha),r};
+  }
+  function buildSpiral(cx,cy,scale,B,theta){
+    const pts=[];
+    for(let i=0;i<=320;i++){
+      const a=-PI*0.08+(PI*1.38)*(i/320);
+      const p=spiralPt(a,B,theta);
+      if(p.r*scale>scale*1.08)break;
+      pts.push({x:cx+p.x*scale,y:cy-p.y*scale,a,r:p.r});
+    }
+    return pts;
+  }
+
+  function draw(ts){
+    requestAnimationFrame(draw);
+    const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;
+    const W=c.width,H=c.height;
+    ctx.clearRect(0,0,W,H);
+
+    lbl(ctx,'TOP-DOWN VIEW — looking down into basin',14,18,'rgba(8,8,8,.22)',10);
+    drawGrid(ctx,W,H);
+
+    const cx=W*0.55,cy=H*0.5,scale=Math.min(W,H)*0.38;
+    const theta=PI/6,B=0.27;
+    const spiral=buildSpiral(cx,cy,scale,B,theta);
+
+    // Spiral fill
+    ctx.beginPath();spiral.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+    ctx.lineTo(cx,cy);ctx.closePath();ctx.fillStyle='rgba(8,8,8,.05)';ctx.fill();
+    // Spiral stroke
+    ctx.beginPath();spiral.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+    ctx.strokeStyle='rgba(8,8,8,.92)';ctx.lineWidth=3;ctx.stroke();
+
+    // Normals
+    ctx.save();ctx.strokeStyle='rgba(8,8,8,.13)';ctx.lineWidth=1;
+    for(let i=8;i<spiral.length-5;i+=20){
+      const p=spiral[i];const na=p.a+(PI/2-theta);
+      ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x+Math.cos(na)*16,p.y-Math.sin(na)*16);ctx.stroke();
+    }
+    ctx.restore();
+
+    // Multiple ghost rays showing constant angle
+    [-35,-20,0,20,35].forEach((deg,gi)=>{
+      const isMain=gi===2;
+      if(isMain)return;// drawn separately
+      const ux=cx-scale*0.7,uy=cy;
+      const base=Math.atan2(cy-uy,cx-ux);
+      const ray=base+deg*PI/180*0.55;
+      const rdx=Math.cos(ray),rdy=Math.sin(ray);
+      // Find hit
+      let hit=null,bestD=9;
+      for(let d=10;d<scale*1.6;d+=3){
+        const rx=ux+rdx*d,ry=uy+rdy*d;
+        spiral.forEach(p=>{const dd=Math.hypot(p.x-rx,p.y-ry);if(dd<bestD){bestD=dd;hit={x:p.x,y:p.y,a:p.a,dist:d};}});
+      }
+      if(hit){
+        ctx.beginPath();ctx.moveTo(ux,uy);ctx.lineTo(hit.x,hit.y);
+        ctx.strokeStyle=`rgba(37,99,235,${0.15})`;ctx.lineWidth=1.2;ctx.stroke();
+        ctx.beginPath();ctx.arc(hit.x,hit.y,3,0,TAU);ctx.fillStyle='rgba(22,163,74,.3)';ctx.fill();
+      }
+    });
+
+    // Main aimed ray
+    const ux=cx-scale*0.7,uy=cy;
+    const base=Math.atan2(cy-uy,cx-ux);
+    const aimRad=aimDeg*PI/180;
+    const rayAngle=base+aimRad*0.55;
+    const rdx=Math.cos(rayAngle),rdy=Math.sin(rayAngle);
+
+    // Find hit on spiral
+    let hit=null,bestD=9;
+    for(let d=10;d<scale*1.6;d+=3){
+      const rx=ux+rdx*d,ry=uy+rdy*d;
+      spiral.forEach(p=>{const dd=Math.hypot(p.x-rx,p.y-ry);if(dd<bestD){bestD=dd;hit={x:p.x,y:p.y,a:p.a,dist:d};}});
+    }
+
+    // Animate stream
+    streamPhase=Math.min(streamPhase+dt*1.4,1);
+    if(hit){
+      const ex=lerp(ux,hit.x,streamPhase),ey=lerp(uy,hit.y,streamPhase);
+      const g=ctx.createLinearGradient(ux,uy,hit.x,hit.y);
+      g.addColorStop(0,'rgba(37,99,235,0)');g.addColorStop(0.3,'rgba(37,99,235,.55)');g.addColorStop(1,'rgba(37,99,235,.9)');
+      ctx.beginPath();ctx.moveTo(ux,uy);ctx.lineTo(ex,ey);ctx.strokeStyle=g;ctx.lineWidth=2.8;ctx.stroke();
+
+      if(streamPhase>=0.99){
+        const na=hit.a+(PI/2-theta);
+        const nx=Math.cos(na),ny=-Math.sin(na);
+
+        // Compute actual impact angle
+        const dot=Math.abs(rdx*nx+rdy*ny);
+        const ia=clamp((PI/2-Math.acos(clamp(dot,-1,1)))*180/PI,0,90);
+        document.getElementById('s4av').textContent=ia.toFixed(0)+'°';
+        document.getElementById('s4badge').className='abadge '+(ia<=35?'safe':'danger');
+
+        // Normal arrow
+        ctx.save();ctx.strokeStyle='rgba(8,8,8,.5)';ctx.lineWidth=1.5;
+        ctx.beginPath();ctx.moveTo(hit.x,hit.y);ctx.lineTo(hit.x+nx*34,hit.y+ny*34);ctx.stroke();
+        // Arrowhead
+        const naAngle=Math.atan2(ny,nx);
+        ctx.beginPath();
+        ctx.moveTo(hit.x+nx*34,hit.y+ny*34);
+        ctx.lineTo(hit.x+nx*34-7*Math.cos(naAngle-.4),hit.y+ny*34-7*Math.sin(naAngle-.4));
+        ctx.lineTo(hit.x+nx*34-7*Math.cos(naAngle+.4),hit.y+ny*34-7*Math.sin(naAngle+.4));
+        ctx.closePath();ctx.fillStyle='rgba(8,8,8,.5)';ctx.fill();
+        ctx.restore();
+
+        // Angle arc
+        ctx.save();ctx.strokeStyle='rgba(22,163,74,.85)';ctx.lineWidth=2;
+        const rAngle=Math.atan2(rdy,rdx);
+        ctx.beginPath();ctx.arc(hit.x,hit.y,26,Math.atan2(ny,nx),rAngle+PI,true);ctx.stroke();
+        lbl(ctx,ia.toFixed(0)+'°',hit.x+10,hit.y-10,'rgba(22,163,74,.95)',12);
+        ctx.restore();
+
+        // Impact dot
+        ctx.beginPath();ctx.arc(hit.x,hit.y,6,0,TAU);ctx.fillStyle='rgba(22,163,74,.9)';ctx.fill();
+
+        // Slide particles
+        slidePts.push({x:hit.x,y:hit.y,vx:(Math.random()-.5)*15,vy:(Math.random()-.5)*15,life:1,ml:.5});
+        setTimeout(()=>streamPhase=0,900);
+      }
+    }
+
+    slidePts.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.life-=dt/p.ml;
+      if(p.life<=0)return;
+      ctx.beginPath();ctx.arc(p.x,p.y,3*p.life,0,TAU);ctx.fillStyle=`rgba(22,163,74,${p.life*.7})`;ctx.fill();
+    });
+    slidePts=slidePts.filter(p=>p.life>0&&slidePts.length<40);
+
+    // User dot (top view)
+    ctx.beginPath();ctx.arc(ux,uy,11,0,TAU);ctx.fillStyle='rgba(8,8,8,.12)';ctx.fill();
+    ctx.beginPath();ctx.arc(ux,uy,11,0,TAU);ctx.strokeStyle='rgba(8,8,8,.5)';ctx.lineWidth=1.5;ctx.stroke();
+    lbl(ctx,'User',ux-14,uy+22,'rgba(8,8,8,.4)',10);
+    lbl(ctx,'(top view)',ux-22,uy+34,'rgba(8,8,8,.22)',9);
+
+    // Drain
+    ctx.beginPath();ctx.arc(cx,cy,5,0,TAU);ctx.fillStyle='rgba(8,8,8,.3)';ctx.fill();
+    lbl(ctx,'Drain',cx-14,cy+17,'rgba(8,8,8,.3)',10);
+  }
+  requestAnimationFrame(draw);
+})();
+
+// ══════════════════════════════════════════
+// SLIDE 5 — TOGETHER
+// ══════════════════════════════════════════
+(()=>{
+  const c=setupCanvas('c5');
+  const ctx=c.getContext('2d');
+  let lastT=performance.now(),t2=0;
+  let streams=[],autoT=0;
+
+  function cornWall(W,H){
+    const pts=[];
+    for(let i=0;i<=80;i++){
+      const t=i/80;
+      const lean=Math.pow(1-t,1.8)*W*0.12;
+      const pb=Math.pow(t,1.4)*W*0.04;
+      pts.push({x:W*0.70-lean+pb,y:H*0.07+t*H*0.86});
+    }
+    return pts;
+  }
+  function wallNormal(wall,x,y){
+    let best=Infinity,bi=0;
+    wall.forEach((p,i)=>{const d=Math.hypot(p.x-x,p.y-y);if(d<best){best=d;bi=i;}});
+    const p=wall[bi],q=wall[bi+1]||wall[bi-1];
+    const tx2=q.x-p.x,ty2=q.y-p.y,tl=Math.hypot(tx2,ty2);
+    return{nx:-ty2/tl,ny:tx2/tl};
+  }
+
+  function draw(ts){
+    requestAnimationFrame(draw);
+    const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;t2+=dt;
+    const W=c.width,H=c.height;
+    ctx.clearRect(0,0,W,H);drawGrid(ctx,W,H);
+
+    const wall=cornWall(W,H);
+
+    // SLIPS shimmer
+    ctx.save();
+    const shim=ctx.createLinearGradient(W*0.58,0,W,0);
+    shim.addColorStop(0,'rgba(22,163,74,.0)');
+    shim.addColorStop(0.4+0.05*Math.sin(t2*1.2),'rgba(22,163,74,.05)');
+    shim.addColorStop(1,'rgba(37,99,235,.03)');
+    ctx.beginPath();wall.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+    ctx.lineTo(W,H*.93);ctx.lineTo(W,H*.07);ctx.closePath();ctx.fillStyle=shim;ctx.fill();
+    ctx.restore();
+
+    // Wall
+    ctx.beginPath();wall.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+    ctx.lineTo(W,H*.93);ctx.lineTo(W,H*.07);ctx.closePath();ctx.fillStyle='rgba(8,8,8,.04)';ctx.fill();
+    ctx.beginPath();wall.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+    ctx.strokeStyle='rgba(8,8,8,.88)';ctx.lineWidth=3;ctx.stroke();
+
+    // Auto-fire streams from random heights
+    autoT+=dt;
+    if(autoT>0.7){autoT=0;
+      const h=0.2+Math.random()*0.75;
+      const ux=W*0.1,uy=H*(0.22+(1-h)*0.32);
+      const tx=W*0.62+(Math.random()-.5)*W*0.04;
+      const ty=H*(0.40+(1-h)*0.22);
+      streams.push({ux,uy,tx,ty,phase:0,age:0,alive:true,hit:null,hitPts:[],spawned:false});
+    }
+    streams=streams.filter(s=>s.age<2.2);
+    streams.forEach(s=>{
+      s.age+=dt;s.phase=Math.min(s.phase+dt*0.85,1);
+      // Arc
+      ctx.beginPath();
+      for(let i=0;i<=40;i++){
+        const p=i/40*s.phase;
+        const x=lerp(s.ux,s.tx,p),y=lerp(s.uy,s.ty,p*p*0.65+p*0.35);
+        i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+      }
+      ctx.strokeStyle='rgba(37,99,235,.7)';ctx.lineWidth=2;ctx.stroke();
+
+      if(s.phase>=0.99&&!s.spawned){
+        s.spawned=true;
+        const n=wallNormal(wall,s.tx,s.ty);
+        s.hit={x:s.tx,y:s.ty};
+        for(let i=0;i<5;i++){
+          s.hitPts.push({x:s.tx,y:s.ty,vx:n.nx*8+(Math.random()-.5)*5,vy:n.ny*8+12+Math.random()*15,life:1,ml:.65});
+        }
+      }
+      if(s.hit){
+        ctx.beginPath();ctx.arc(s.hit.x,s.hit.y,5,0,TAU);ctx.fillStyle='rgba(22,163,74,.88)';ctx.fill();
+        lbl(ctx,'≤30°',s.hit.x+8,s.hit.y-8,'rgba(22,163,74,.7)',9);
+      }
+      s.hitPts.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=140*dt;p.life-=dt/p.ml;
+        if(p.life<=0)return;
+        ctx.beginPath();ctx.arc(p.x,p.y,3*p.life,0,TAU);ctx.fillStyle=`rgba(22,163,74,${p.life*.7})`;ctx.fill();
+      });
+    });
+
+    // Drain arrow
+    ctx.save();ctx.strokeStyle='rgba(22,163,74,.6)';ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(W*0.72,H*0.87);ctx.lineTo(W*0.72,H*0.96);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(W*0.72,H*0.96);ctx.lineTo(W*0.72-5,H*0.92);ctx.lineTo(W*0.72+5,H*0.92);ctx.closePath();
+    ctx.fillStyle='rgba(22,163,74,.6)';ctx.fill();ctx.restore();
+    lbl(ctx,'↓ drain',W*0.73,H*0.95,'rgba(22,163,74,.6)',10);
+
+    // Labels
+    ctx.save();ctx.font='bold 11px "Barlow Condensed",sans-serif';ctx.letterSpacing='.06em';
+    ctx.fillStyle='rgba(8,8,8,.4)';ctx.fillText('CORNUCOPIA PROFILE',W*0.38,H*0.055);
+    ctx.fillStyle='rgba(22,163,74,.65)';ctx.fillText('SLIPS NANO-COATING',W*0.65,H*0.055);
+    ctx.fillStyle='rgba(22,163,74,.8)';ctx.fillText('ALL STREAMS → ≤30° → DRAIN',W*0.03,H*0.965);
+    ctx.restore();
+  }
+  requestAnimationFrame(draw);
+})();
+
+})();
+</script>
+</section>
+
+<footer>
+  <div class="fl">Future Shit™</div>
+  <div class="fc">Bathroom Innovation Think Tank<br>© 2026 Future Shit Inc. All splashes reserved.</div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=-100,my=-100,rx=-100,ry=-100;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button,.feat-hd,.expander-hd,.pstat,.hstat,.nav-cta').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cur.classList.add('h'));
+  el.addEventListener('mouseleave',()=>cur.classList.remove('h'));
+});
+const prog=document.getElementById('prog');
+window.addEventListener('scroll',()=>{prog.style.transform='scaleX('+(window.scrollY/(document.body.scrollHeight-window.innerHeight))+')';},{passive:true});
+const hdr=document.getElementById('hdr');
+let lastY=0;
+window.addEventListener('scroll',()=>{const y=window.scrollY;hdr.classList.toggle('hide',y>lastY&&y>80);lastY=y;},{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>obs.observe(el));
+document.querySelectorAll('.h-cta,.nav-cta,.contact-email').forEach(btn=>{
+  btn.addEventListener('mousemove',function(e){const r=this.getBoundingClientRect();const dx=(e.clientX-r.left-r.width/2)*.25;const dy=(e.clientY-r.top-r.height/2)*.25;this.style.transform='translate('+dx+'px,'+dy+'px)';});
+  btn.addEventListener('mouseleave',function(){this.style.transform='';});
+});
+const names=document.querySelectorAll('.prod-name');
+window.addEventListener('scroll',()=>{names.forEach(el=>{const fc=(window.innerHeight/2-(el.getBoundingClientRect().top+el.offsetHeight/2));el.style.transform='translateY('+(fc*.025)+'px)';});},{passive:true});
+document.querySelectorAll('[data-expander]').forEach(exp=>{
+  exp.querySelector('.expander-hd').addEventListener('click',()=>{
+    exp.classList.toggle('open');
+    if(exp.classList.contains('open')){setTimeout(()=>{const top=exp.getBoundingClientRect().top;if(top<0)window.scrollBy({top:top-20,behavior:'smooth'});},50);}
+  });
+});
+document.querySelectorAll('.feat').forEach(feat=>{
+  feat.querySelector('.feat-hd').addEventListener('click',()=>{
+    const open=feat.classList.contains('open');
+    feat.closest('.feat-list').querySelectorAll('.feat.open').forEach(f=>f.classList.remove('open'));
+    if(!open){feat.classList.add('open');setTimeout(()=>{const top=feat.getBoundingClientRect().top;if(top<90)window.scrollBy({top:top-100,behavior:'smooth'});},50);}
+  });
+});
+</script>
+<script>
+// ── FEATURE CARD MINI VISUALIZATIONS ──
+(function(){
+  const PI=Math.PI,TAU=PI*2;
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+  const lerp=(a,b,t)=>a+(b-a)*t;
+
+  function fitCanvas(id){
+    const el=document.getElementById(id);
+    if(!el)return null;
+    function r(){el.width=el.parentElement.clientWidth;el.height=el.parentElement.clientHeight;}
+    r();window.addEventListener('resize',r);
+    return el;
+  }
+
+  // ══ NAUTILUS MINI (top-down spiral) ══
+  (function(){
+    const c=fitCanvas('fc-nautilus');
+    if(!c)return;
+    const ctx=c.getContext('2d');
+    let aimDeg=0,lastT=performance.now(),sPhase=0,slidePts=[];
+    const aimSlider=document.getElementById('fc-naim');
+    if(aimSlider)aimSlider.addEventListener('input',function(){aimDeg=+this.value;sPhase=0;});
+
+    function spiralPt(a,B,th){const r=B*Math.exp(a/Math.tan(th));return{x:r*Math.cos(a),y:r*Math.sin(a),r};}
+
+    function draw(ts){
+      requestAnimationFrame(draw);
+      const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;
+      const W=c.width,H=c.height;
+      ctx.clearRect(0,0,W,H);
+
+      // subtle grid
+      ctx.strokeStyle='rgba(8,8,8,.03)';ctx.lineWidth=1;
+      for(let x=0;x<W;x+=30){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+      for(let y=0;y<H;y+=30){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+
+      const cx=W*0.55,cy=H*0.5,scale=Math.min(W,H)*0.38,th=PI/6,B=0.27;
+
+      // Build spiral
+      const pts=[];
+      for(let i=0;i<=280;i++){
+        const a=-PI*0.08+(PI*1.35)*(i/280);
+        const p=spiralPt(a,B,th);
+        if(p.r*scale>scale*1.05)break;
+        pts.push({x:cx+p.x*scale,y:cy-p.y*scale,a});
+      }
+      // Fill
+      ctx.beginPath();pts.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+      ctx.lineTo(cx,cy);ctx.closePath();ctx.fillStyle='rgba(8,8,8,.04)';ctx.fill();
+      // Stroke
+      ctx.beginPath();pts.forEach((p,i)=>i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
+      ctx.strokeStyle='rgba(8,8,8,.85)';ctx.lineWidth=2;ctx.stroke();
+      // Normals
+      ctx.strokeStyle='rgba(8,8,8,.1)';ctx.lineWidth=1;
+      for(let i=8;i<pts.length-5;i+=18){
+        const p=pts[i],na=p.a+(PI/2-th);
+        ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x+Math.cos(na)*12,p.y-Math.sin(na)*12);ctx.stroke();
+      }
+
+      // User + ray
+      const ux=cx-scale*0.72,uy=cy;
+      const base=Math.atan2(cy-uy,cx-ux);
+      const rayAngle=base+aimDeg*PI/180*0.55;
+      const rdx=Math.cos(rayAngle),rdy=Math.sin(rayAngle);
+
+      // Ghost rays
+      [-30,30].forEach(function(deg){
+        const ra=base+deg*PI/180*0.55;
+        const rdx2=Math.cos(ra),rdy2=Math.sin(ra);
+        let hit2=null,best2=9;
+        for(let d=8;d<scale*1.6;d+=3){
+          const rx=ux+rdx2*d,ry=uy+rdy2*d;
+          pts.forEach(function(p){const dd=Math.hypot(p.x-rx,p.y-ry);if(dd<best2){best2=dd;hit2={x:p.x,y:p.y};}});
+        }
+        if(hit2){
+          ctx.beginPath();ctx.moveTo(ux,uy);ctx.lineTo(hit2.x,hit2.y);
+          ctx.strokeStyle='rgba(37,99,235,.12)';ctx.lineWidth=1;ctx.stroke();
+        }
+      });
+
+      // Main ray
+      let hit=null,bestD=9;
+      for(let d=8;d<scale*1.6;d+=3){
+        const rx=ux+rdx*d,ry=uy+rdy*d;
+        pts.forEach(function(p){const dd=Math.hypot(p.x-rx,p.y-ry);if(dd<bestD){bestD=dd;hit={x:p.x,y:p.y,a:p.a,dist:d};}});
+      }
+      sPhase=Math.min(sPhase+dt*1.6,1);
+      if(hit){
+        const ex=lerp(ux,hit.x,sPhase),ey=lerp(uy,hit.y,sPhase);
+        const g=ctx.createLinearGradient(ux,uy,hit.x,hit.y);
+        g.addColorStop(0,'rgba(37,99,235,0)');g.addColorStop(0.4,'rgba(37,99,235,.5)');g.addColorStop(1,'rgba(37,99,235,.85)');
+        ctx.beginPath();ctx.moveTo(ux,uy);ctx.lineTo(ex,ey);ctx.strokeStyle=g;ctx.lineWidth=2;ctx.stroke();
+
+        if(sPhase>=0.99){
+          const na=hit.a+(PI/2-th);
+          const nx=Math.cos(na),ny=-Math.sin(na);
+          const dot=Math.abs(rdx*nx+rdy*ny);
+          const ia=clamp((PI/2-Math.acos(clamp(dot,-1,1)))*180/PI,0,90);
+
+          ctx.beginPath();ctx.arc(hit.x,hit.y,5,0,TAU);ctx.fillStyle='rgba(22,163,74,.9)';ctx.fill();
+          ctx.save();ctx.strokeStyle='rgba(8,8,8,.4)';ctx.lineWidth=1.2;
+          ctx.beginPath();ctx.moveTo(hit.x,hit.y);ctx.lineTo(hit.x+nx*26,hit.y+ny*26);ctx.stroke();ctx.restore();
+
+          ctx.font='bold 11px "Barlow Condensed",sans-serif';ctx.fillStyle='rgba(22,163,74,.9)';
+          ctx.fillText(ia.toFixed(0)+'°',hit.x+8,hit.y-6);
+
+          slidePts.push({x:hit.x,y:hit.y,vx:(Math.random()-.5)*12,vy:(Math.random()-.5)*12,life:1,ml:.5});
+          setTimeout(function(){sPhase=0;},700);
+        }
+      }
+      slidePts.forEach(function(p){p.x+=p.vx*dt;p.y+=p.vy*dt;p.life-=dt/p.ml;
+        if(p.life<=0)return;
+        ctx.beginPath();ctx.arc(p.x,p.y,3*p.life,0,TAU);ctx.fillStyle='rgba(22,163,74,'+p.life*.7+')';ctx.fill();
+      });
+      slidePts=slidePts.filter(function(p){return p.life>0&&slidePts.length<25;});
+
+      // User dot
+      ctx.beginPath();ctx.arc(ux,uy,8,0,TAU);ctx.fillStyle='rgba(8,8,8,.1)';ctx.fill();
+      ctx.beginPath();ctx.arc(ux,uy,8,0,TAU);ctx.strokeStyle='rgba(8,8,8,.4)';ctx.lineWidth=1.2;ctx.stroke();
+      // Drain
+      ctx.beginPath();ctx.arc(cx,cy,4,0,TAU);ctx.fillStyle='rgba(8,8,8,.25)';ctx.fill();
+
+      // Angle label
+      if(Math.abs(aimDeg)>3){
+        ctx.font='10px "DM Mono",monospace';ctx.fillStyle='rgba(8,8,8,.3)';
+        ctx.fillText((aimDeg>0?'Right ':'Left ')+Math.abs(aimDeg)+'°',ux-18,uy-14);
+      }
+    }
+    requestAnimationFrame(draw);
+  })();
+
+  // ══ CORNUCOPIA MINI ══
+  (function(){
+    const c=fitCanvas('fc-corn');
+    if(!c)return;
+    const ctx=c.getContext('2d');
+    let uH=0.65,lastT=performance.now();
+    const hSlider=document.getElementById('fc-cheight');
+    if(hSlider)hSlider.addEventListener('input',function(){uH=this.value/100;});
+
+    function cornWall(W,H){
+      const pts=[];
+      for(let i=0;i<=80;i++){
+        const t=i/80;
+        const lean=Math.pow(1-t,1.8)*W*0.13;
+        const pb=Math.pow(t,1.4)*W*0.04;
+        pts.push({x:W*0.72-lean+pb,y:H*0.06+t*H*0.88});
+      }
+      return pts;
+    }
+    function getArc(h,W,H,wall){
+      const ux=W*0.1,uy=H*(0.2+(1-h)*0.32);
+      const tx=W*0.65,ty=H*(0.38+(1-h)*0.24);
+      const arcPts=[];
+      for(let i=0;i<=60;i++){
+        const p=i/60;
+        arcPts.push({x:lerp(ux,tx,p),y:lerp(uy,ty,p*p*0.7+p*0.3)});
+      }
+      let hit=null;
+      outer: for(let i=0;i<arcPts.length-1;i++){
+        for(let j=0;j<wall.length-1;j++){
+          const p=arcPts[i],q=arcPts[i+1],a=wall[j],b=wall[j+1];
+          const dx1=q.x-p.x,dy1=q.y-p.y,dx2=b.x-a.x,dy2=b.y-a.y;
+          const denom=dx1*dy2-dy1*dx2;
+          if(Math.abs(denom)<0.01)continue;
+          const t1=((a.x-p.x)*dy2-(a.y-p.y)*dx2)/denom;
+          const t2=((a.x-p.x)*dy1-(a.y-p.y)*dx1)/denom;
+          if(t1>=0&&t1<=1&&t2>=0&&t2<=1){
+            hit={x:lerp(p.x,q.x,t1),y:lerp(p.y,q.y,t1)};break outer;
+          }
+        }
+      }
+      return{arcPts,hit,ux,uy};
+    }
+
+    let spawnT=0,streams=[];
+    function draw(ts){
+      requestAnimationFrame(draw);
+      const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;
+      const W=c.width,H=c.height;
+      ctx.clearRect(0,0,W,H);
+      ctx.strokeStyle='rgba(8,8,8,.03)';ctx.lineWidth=1;
+      for(let x=0;x<W;x+=30){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+      for(let y=0;y<H;y+=30){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+
+      const wall=cornWall(W,H);
+      ctx.beginPath();wall.forEach(function(p,i){i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);});
+      ctx.lineTo(W,H*.94);ctx.lineTo(W,H*.06);ctx.closePath();ctx.fillStyle='rgba(8,8,8,.04)';ctx.fill();
+      ctx.beginPath();wall.forEach(function(p,i){i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);});
+      ctx.strokeStyle='rgba(8,8,8,.85)';ctx.lineWidth=2.5;ctx.stroke();
+
+      // Normals
+      ctx.strokeStyle='rgba(8,8,8,.1)';ctx.lineWidth=1;
+      for(let i=3;i<wall.length-3;i+=8){
+        const p=wall[i],q=wall[i+1]||wall[i];
+        const tx2=q.x-p.x,ty2=q.y-p.y,tl=Math.hypot(tx2,ty2);
+        if(tl===0)return;
+        const nx=-ty2/tl,ny=tx2/tl;
+        ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x+nx*12,p.y+ny*12);ctx.stroke();
+      }
+
+      // Ghost arcs
+      [0.2,0.85].forEach(function(bh){
+        const arc=getArc(bh,W,H,wall);
+        ctx.beginPath();arc.arcPts.forEach(function(p,i){i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);});
+        ctx.strokeStyle='rgba(37,99,235,.18)';ctx.lineWidth=1.2;ctx.stroke();
+        if(arc.hit){ctx.beginPath();ctx.arc(arc.hit.x,arc.hit.y,3,0,TAU);ctx.fillStyle='rgba(22,163,74,.4)';ctx.fill();}
+      });
+
+      // Active arc
+      spawnT+=dt;
+      if(spawnT>1.2){spawnT=0;
+        const arc=getArc(uH,W,H,wall);
+        streams.push({arcPts:arc.arcPts,hit:arc.hit,ux:arc.ux,uy:arc.uy,phase:0,age:0,sp:[]});
+      }
+      streams=streams.filter(function(s){return s.age<2;});
+      streams.forEach(function(s){
+        s.phase=Math.min(s.phase+dt,1);s.age+=dt;
+        const n=Math.floor(s.arcPts.length*s.phase);
+        ctx.beginPath();s.arcPts.slice(0,n).forEach(function(p,i){i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);});
+        ctx.strokeStyle='rgba(37,99,235,.85)';ctx.lineWidth=2;ctx.stroke();
+        if(s.phase>=1&&s.hit){
+          ctx.beginPath();ctx.arc(s.hit.x,s.hit.y,6,0,TAU);ctx.fillStyle='rgba(22,163,74,.88)';ctx.fill();
+          ctx.font='bold 11px "Barlow Condensed",sans-serif';ctx.fillStyle='rgba(22,163,74,.85)';
+          ctx.fillText('≤30°',s.hit.x+8,s.hit.y-5);
+          if(!s.spawned){s.spawned=true;
+            for(let i=0;i<4;i++)s.sp.push({x:s.hit.x,y:s.hit.y,vx:-2-Math.random()*3,vy:8+i*5,life:1,ml:.7});
+          }
+        }
+        s.sp.forEach(function(p){p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=100*dt;p.life-=dt/p.ml;
+          if(p.life<=0)return;
+          ctx.beginPath();ctx.arc(p.x,p.y,2.5*p.life,0,TAU);ctx.fillStyle='rgba(22,163,74,'+p.life*.7+')';ctx.fill();
+        });
+      });
+
+      // User
+      const ux=W*0.1,uy=H*(0.2+(1-uH)*0.32);
+      ctx.save();ctx.strokeStyle='rgba(8,8,8,.4)';ctx.lineWidth=1.5;
+      ctx.beginPath();ctx.arc(ux,uy-16,7,0,TAU);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(ux,uy-9);ctx.lineTo(ux,uy+8);ctx.moveTo(ux-7,uy-1);ctx.lineTo(ux+7,uy-1);
+      ctx.moveTo(ux,uy+8);ctx.lineTo(ux-4,uy+20);ctx.moveTo(ux,uy+8);ctx.lineTo(ux+4,uy+20);
+      ctx.stroke();ctx.restore();
+      ctx.font='9px "DM Mono",monospace';ctx.fillStyle='rgba(8,8,8,.35)';
+      ctx.fillText((1.4+uH*0.6).toFixed(1)+'m',ux+10,uy+2);
+    }
+    requestAnimationFrame(draw);
+  })();
+
+  // ══ SLIPS COATING MINI ══
+  (function(){
+    const c=fitCanvas('fc-slips');
+    if(!c)return;
+    const ctx=c.getContext('2d');
+    let t=0,lastT=performance.now();
+    let droplets=[];
+
+    // Spawn a droplet every so often
+    let spawnT=0;
+
+    function draw(ts){
+      requestAnimationFrame(draw);
+      const dt=Math.min((ts-lastT)/1000,0.05);lastT=ts;
+      t+=dt;
+      const W=c.width,H=c.height;
+      ctx.clearRect(0,0,W,H);
+
+      // ── BACKGROUND ZONES ──
+      // Top zone: "air" above surface
+      ctx.fillStyle='rgba(220,235,255,.18)';
+      ctx.fillRect(0,0,W,H*0.38);
+
+      // Ceramic substrate (bottom)
+      ctx.fillStyle='rgba(8,8,8,.07)';
+      ctx.fillRect(0,H*0.72,W,H*0.28);
+      // Ceramic texture lines
+      ctx.strokeStyle='rgba(8,8,8,.08)';ctx.lineWidth=1;
+      for(let x=0;x<W;x+=18){ctx.beginPath();ctx.moveTo(x,H*0.72);ctx.lineTo(x+9,H);ctx.stroke();}
+
+      // Nano-pore layer
+      const poreTop=H*0.56,poreH=H*0.16;
+      ctx.fillStyle='rgba(8,8,8,.04)';ctx.fillRect(0,poreTop,W,poreH);
+
+      // Draw nano-pores (small vertical channels)
+      const nPores=Math.floor(W/22);
+      for(let i=0;i<nPores;i++){
+        const px=11+i*22;
+        // Pore channel
+        ctx.fillStyle='rgba(8,8,8,.12)';
+        ctx.fillRect(px-3,poreTop,6,poreH);
+        // Lubricant fill in pore (animated level)
+        const fillH=poreH*(0.6+0.15*Math.sin(t*0.8+i*0.4));
+        ctx.fillStyle='rgba(37,99,235,.35)';
+        ctx.fillRect(px-2,poreTop+poreH-fillH,4,fillH);
+      }
+
+      // Lubricant film on surface (thin blue layer)
+      const filmY=H*0.54;
+      const filmThick=6;
+      ctx.fillStyle='rgba(37,99,235,.2)';
+      ctx.fillRect(0,filmY,W,filmThick);
+      // Shimmer
+      const shimmer=ctx.createLinearGradient(0,filmY,W,filmY);
+      shimmer.addColorStop(0,'rgba(255,255,255,0)');
+      shimmer.addColorStop((0.3+0.4*((Math.sin(t*1.2)+1)/2)),'rgba(255,255,255,.3)');
+      shimmer.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.fillStyle=shimmer;
+      ctx.fillRect(0,filmY,W,filmThick);
+
+      // Zone labels
+      ctx.font='9px "DM Mono",monospace';
+      ctx.fillStyle='rgba(8,8,8,.3)';
+      ctx.fillText('LIQUID ABOVE SURFACE',10,H*0.12);
+      ctx.fillStyle='rgba(37,99,235,.7)';
+      ctx.fillText('LUBRICANT FILM',10,filmY-5);
+      ctx.fillStyle='rgba(8,8,8,.3)';
+      ctx.fillText('NANO-PORE LAYER (locks lubricant)',10,poreTop+poreH+12);
+      ctx.fillStyle='rgba(8,8,8,.25)';
+      ctx.fillText('CERAMIC SUBSTRATE',10,H*0.9);
+
+      // Divider lines
+      ctx.strokeStyle='rgba(8,8,8,.12)';ctx.lineWidth=1;ctx.setLineDash([4,3]);
+      ctx.beginPath();ctx.moveTo(0,filmY);ctx.lineTo(W,filmY);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(0,H*0.72);ctx.lineTo(W,H*0.72);ctx.stroke();
+      ctx.setLineDash([]);
+
+      // ── DROPLET ANIMATION ──
+      spawnT+=dt;
+      if(spawnT>1.4){spawnT=0;
+        droplets.push({
+          x:W*0.15+Math.random()*W*0.7,
+          y:0,
+          vy:80+Math.random()*60,
+          r:6+Math.random()*5,
+          phase:'falling',// falling -> impact -> sliding -> gone
+          age:0,
+          slideVx:(Math.random()>.5?1:-1)*(30+Math.random()*40),
+          hitY:filmY,
+          splashPts:[]
+        });
+      }
+
+      droplets.forEach(function(d){
+        d.age+=dt;
+
+        if(d.phase==='falling'){
+          d.y+=d.vy*dt;
+          d.vy+=120*dt;// gravity
+          // Draw droplet
+          ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,TAU);
+          ctx.fillStyle='rgba(37,99,235,.75)';ctx.fill();
+          ctx.beginPath();ctx.arc(d.x-d.r*0.3,d.y-d.r*0.3,d.r*0.3,0,TAU);
+          ctx.fillStyle='rgba(255,255,255,.4)';ctx.fill();
+          if(d.y>=d.hitY-d.r){
+            d.phase='sliding';
+            d.y=d.hitY;
+            // Spawn small surface ripple
+            for(let i=0;i<6;i++){
+              const a=(Math.random()-0.5)*PI*0.6;
+              d.splashPts.push({x:d.x,y:d.hitY,vx:Math.cos(a)*25,vy:Math.sin(a)*8-5,life:1,ml:.3});
+            }
+          }
+        } else if(d.phase==='sliding'){
+          // Slide along lubricant surface
+          d.x+=d.slideVx*dt;
+          d.r=Math.max(d.r-dt*2,3);// flatten slightly
+          if(d.r<=3||d.x<0||d.x>W)d.phase='gone';
+          // Draw flattened droplet on surface
+          ctx.save();
+          ctx.beginPath();
+          ctx.ellipse(d.x,d.hitY,d.r*1.4,d.r*0.7,0,0,TAU);
+          ctx.fillStyle='rgba(37,99,235,.65)';ctx.fill();
+          // Slide trail
+          ctx.beginPath();
+          const trailLen=d.slideVx*0.3;
+          ctx.moveTo(d.x,d.hitY);ctx.lineTo(d.x-trailLen,d.hitY);
+          ctx.strokeStyle='rgba(37,99,235,.2)';ctx.lineWidth=2;ctx.stroke();
+          ctx.restore();
+        }
+
+        // Ripple particles
+        d.splashPts.forEach(function(p){
+          p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=60*dt;p.life-=dt/p.ml;
+          if(p.life<=0)return;
+          ctx.beginPath();ctx.arc(p.x,p.y,2*p.life,0,TAU);
+          ctx.fillStyle='rgba(37,99,235,'+p.life*.5+')';ctx.fill();
+        });
+      });
+      droplets=droplets.filter(function(d){return d.phase!=='gone';});
+
+      // ── COMPARISON LABELS ──
+      // Right side: traditional coating failure
+      ctx.save();
+      ctx.font='bold 10px "Barlow Condensed",sans-serif';
+      ctx.fillStyle='rgba(8,8,8,.5)';
+      ctx.fillText('SLIPS: DROPLETS SLIDE',W*0.5,H*0.08);
+      ctx.font='9px "DM Mono",monospace';
+      ctx.fillStyle='rgba(22,163,74,.8)';
+      ctx.fillText('liquid-on-liquid → zero friction',W*0.5,H*0.15);
+      ctx.fillStyle='rgba(220,38,38,.6)';
+      ctx.fillText('vs. standard coating: droplets stick',W*0.5,H*0.22);
+      ctx.restore();
+    }
+    requestAnimationFrame(draw);
+  })();
+
+})();
+</script>
+
+
+</body>
+</html>

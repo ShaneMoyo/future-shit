@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — FUTURE SHIT</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Barlow+Condensed:ital,wght@0,300;0,700;0,800;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="prog" id="prog"></div>
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="cur-ring"></div>
+
+<header id="hdr">
+  <a href="index.html" class="logo logo-link">Future Shit<sup style="font-size:.45em;vertical-align:super;color:var(--grey);font-weight:300;">™</sup>
+    <span class="logo-sub">Bathroom Innovation Think Tank</span>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#products">Products</a>
+    <a href="index.html#contact" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<section id="products" style="padding-top:6rem;">
+  <div class="inner">
+    <div class="sec-head reveal"><span class="sec-lbl">Products</span><span class="sec-num">01 — 03</span></div>
+    <h2 class="prod-intro-h reveal">Three<br>Products.<br><em>One</em><br>Mission.</h2>
+    <p class="prod-intro-sub reveal">Each product tackles a different dimension of the bathroom problem — hardware, venue infrastructure, city-wide access. Together they form a complete vision for 21st century hygiene.</p>
+
+    <!-- Product 1 Card -->
+    <div class="prod-card">
+      <div class="prod-head reveal"><span class="prod-idx">Product — 01 / 03</span><span class="prod-status"><span class="sdot"></span>In Development</span></div>
+      <h2 class="prod-name reveal">Zero<br><em>Splash</em><br>Urinal</h2>
+      <div class="pstats stagger reveal">
+        <div class="pstat"><span class="pstat-n">98.6%</span><span class="pstat-l">Splash Reduction</span></div>
+        <div class="pstat"><span class="pstat-n">≤30°</span><span class="pstat-l">Max Impact Angle</span></div>
+        <div class="pstat"><span class="pstat-n">150°+</span><span class="pstat-l">Surface Contact Angle</span></div>
+        <div class="pstat"><span class="pstat-n">10yr</span><span class="pstat-l">Coating Lifespan</span></div>
+      </div>
+      <div class="prod-body reveal">
+        <p>The standard urinal today is functionally identical to the one Marcel Duchamp placed in an art gallery as a provocation in 1917. Over a century ago. <strong>Nobody has seriously tried to redesign it since.</strong></p>
+      </div>
+      <a href="product-1.html" class="h-cta reveal">Learn More →</a>
+    </div>
+
+    <!-- Product 2 Card -->
+    <div class="prod-card">
+      <div class="prod-head reveal"><span class="prod-idx">Product — 02 / 03</span><span class="prod-status"><span class="sdot"></span>Pilot Planning</span></div>
+      <h2 class="prod-name reveal"><em>Encore</em><br>Venue<br>Pods</h2>
+      <div class="pstats stagger reveal">
+        <div class="pstat"><span class="pstat-n">5 min</span><span class="pstat-l">Private Session</span></div>
+        <div class="pstat"><span class="pstat-n">App</span><span class="pstat-l">Virtual Queue</span></div>
+        <div class="pstat"><span class="pstat-n">0</span><span class="pstat-l">Songs Missed</span></div>
+        <div class="pstat"><span class="pstat-n">★★★★★</span><span class="pstat-l">Reputation Enforced</span></div>
+      </div>
+      <div class="prod-body reveal">
+        <p>The porta-potty is one of the most degrading experiences in modern life. A hot plastic box. 40 people in line. A horrible smell. You miss half the show. <strong>It doesn't have to be this way.</strong></p>
+      </div>
+      <a href="product-2.html" class="h-cta reveal">Learn More →</a>
+    </div>
+
+    <!-- Product 3 Card -->
+    <div class="prod-card">
+      <div class="prod-head reveal"><span class="prod-idx">Product — 03 / 03</span><span class="prod-status"><span class="sdot"></span>Concept Stage</span></div>
+      <h2 class="prod-name reveal">Gotta<br><em>Go</em><br>Network</h2>
+      <div class="pstats stagger reveal">
+        <div class="pstat"><span class="pstat-n">$10</span><span class="pstat-l">Per Month</span></div>
+        <div class="pstat"><span class="pstat-n">2-Way</span><span class="pstat-l">Reputation System</span></div>
+        <div class="pstat"><span class="pstat-n">↑</span><span class="pstat-l">Partner Foot Traffic</span></div>
+        <div class="pstat"><span class="pstat-n">0</span><span class="pstat-l">Purchases Required</span></div>
+      </div>
+      <div class="prod-body reveal">
+        <p>Finding a clean bathroom in a city is harder than it should be. Public restrooms are scarce, unsafe, frequently locked. Coffee shops require a purchase. <strong>GottaGo is a $10/month subscription that turns existing business bathrooms into a city-wide clean bathroom network.</strong></p>
+      </div>
+      <a href="product-3.html" class="h-cta reveal">Learn More →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Future Shit™</div>
+  <div class="fc">Bathroom Innovation Think Tank<br>© 2026 Future Shit Inc. All splashes reserved.</div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=-100,my=-100,rx=-100,ry=-100;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button,.pstat,.hstat,.nav-cta').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cur.classList.add('h'));
+  el.addEventListener('mouseleave',()=>cur.classList.remove('h'));
+});
+const prog=document.getElementById('prog');
+window.addEventListener('scroll',()=>{prog.style.transform='scaleX('+(window.scrollY/(document.body.scrollHeight-window.innerHeight))+')';},{passive:true});
+const hdr=document.getElementById('hdr');
+let lastY=0;
+window.addEventListener('scroll',()=>{const y=window.scrollY;hdr.classList.toggle('hide',y>lastY&&y>80);lastY=y;},{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>obs.observe(el));
+document.querySelectorAll('.h-cta,.nav-cta').forEach(btn=>{
+  btn.addEventListener('mousemove',function(e){const r=this.getBoundingClientRect();const dx=(e.clientX-r.left-r.width/2)*.25;const dy=(e.clientY-r.top-r.height/2)*.25;this.style.transform='translate('+dx+'px,'+dy+'px)';});
+  btn.addEventListener('mouseleave',function(){this.style.transform='';});
+});
+const names=document.querySelectorAll('.prod-name');
+window.addEventListener('scroll',()=>{names.forEach(el=>{const fc=(window.innerHeight/2-(el.getBoundingClientRect().top+el.offsetHeight/2));el.style.transform='translateY('+(fc*.025)+'px)';});},{passive:true});
+</script>
+
+</body>
+</html>
