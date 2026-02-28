@@ -220,6 +220,22 @@ footer{background:var(--black);color:var(--white);padding:1.4rem;display:flex;ju
   color:var(--grey);font-weight:300;
 }
 
+/* SECTION EXPANDERS */
+.expander{margin-top:2.5rem;}
+.expander-hd{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 0;cursor:none;border-top:1px solid var(--rule-s);user-select:none;}
+.expander-lbl{font-size:.5rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);font-weight:300;transition:color .25s;}
+.expander.open .expander-lbl{color:var(--black);}
+.expander-plus{position:relative;width:22px;height:22px;flex-shrink:0;}
+.expander-plus::before,.expander-plus::after{content:'';position:absolute;background:var(--black);top:50%;left:50%;border-radius:1px;}
+.expander-plus::before{width:12px;height:1px;transform:translate(-50%,-50%);}
+.expander-plus::after{width:1px;height:12px;transform:translate(-50%,-50%);transition:transform .3s var(--expo),opacity .3s;}
+.expander.open .expander-plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0;}
+.expander-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--expo);}
+.expander.open .expander-body{grid-template-rows:1fr;}
+.expander-inner{overflow:hidden;}
+.geo-expander{margin-top:1.5rem;}
+.geo-expander .expander-hd{border-top:none;border-bottom:1px solid rgba(8,8,8,.1);}
+
 /* KEYFRAMES */
 @keyframes slideUp{from{transform:translateY(110%);}to{transform:translateY(0);}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
@@ -466,22 +482,36 @@ footer{background:var(--black);color:var(--white);padding:1.4rem;display:flex;ju
       </div>
     </div>
 
-    <div class="sci-wrap">
-      <h3 class="sci-h reveal">Why Splash Happens —<br>And <em>Exactly</em> How We Stop It.</h3>
+    <div class="expander reveal" data-expander>
+      <div class="expander-hd">
+        <span class="expander-lbl">Why Splash Happens — And Exactly How We Stop It</span>
+        <div class="expander-plus"></div>
+      </div>
+      <div class="expander-body"><div class="expander-inner">
+      <div class="sci-wrap" style="margin-top:0;border-top:none;padding-top:1.5rem;">
       <div class="sci-steps stagger reveal">
         <div class="sci-step"><div class="step-n">Step 01 — The Breakup</div><div class="step-t">Droplets, Not Streams</div><p class="step-b">A urine stream exits at 2.5–3.5 m/s. Due to capillary-wave instabilities, it breaks into discrete high-velocity <strong>droplets</strong> within 6–7 inches of the body. These droplets — not the continuous stream — cause splashback when they hit a hard surface at speed.</p></div>
         <div class="sci-step"><div class="step-n">Step 02 — The Impact</div><div class="step-t">The 90° Problem</div><p class="step-b">Traditional urinals present a near-<strong>90° flat wall</strong>. Droplets at this angle undergo massive deformation and eject satellite droplets in all directions. Physics guarantees splashback at 45°–90°. Standard urinals guarantee exactly those angles.</p></div>
         <div class="sci-step"><div class="step-n">Step 03 — Our Fix</div><div class="step-t">The Critical Angle</div><p class="step-b">Below <strong>30°</strong>, fluid energy doesn't bounce — it slides. Our Cornucopia and Nautilus geometries mathematically guarantee every stream meets our surface at or below that threshold. SLIPS coating evacuates any remaining film to the drain instantly.</p></div>
       </div>
     </div>
+      </div></div>
+    </div>
 
-    <div class="ops-wrap">
-      <div class="sec-head reveal"><span class="sec-lbl">Operational Impact</span></div>
+    <div class="expander reveal" data-expander>
+      <div class="expander-hd">
+        <span class="expander-lbl">Operational Impact</span>
+        <div class="expander-plus"></div>
+      </div>
+      <div class="expander-body"><div class="expander-inner">
+      <div class="ops-wrap" style="margin-top:0;border-top:none;padding-top:1.5rem;">
       <div class="prod-body reveal">
         <p><strong>For the user:</strong> you walk away dry. No checking your shoes. No carefully avoiding wet patches on the floor.</p>
         <p><strong>For the facility manager:</strong> 50%+ reduction in janitorial labor. Floor contamination radius drops from ~0.5m to near zero. Cleaning costs fall 25–40%. The odor problem is eliminated at the source, not masked.</p>
         <p><strong>For the building:</strong> the fixture pays for itself. Airports, stadiums, hotels, universities, transit hubs — all see compelling ROI from reduced operating costs alone.</p>
       </div>
+    </div>
+      </div></div>
     </div>
   </div>
 </section>
@@ -529,6 +559,13 @@ footer{background:var(--black);color:var(--white);padding:1.4rem;display:flex;ju
 
 <div class="geo-section-lbl">How It Works — Visual Science</div>
 <div class="geo-section-title">Zero Splash<br><em>Explained.</em></div>
+
+<div class="expander geo-expander" data-expander>
+  <div class="expander-hd">
+    <span class="expander-lbl">Explore 6 Interactive Visual Demos</span>
+    <div class="expander-plus"></div>
+  </div>
+  <div class="expander-body"><div class="expander-inner">
 
 <!-- ── PANEL 1: THE PROBLEM ── -->
 <div class="geo-panel">
@@ -664,6 +701,9 @@ footer{background:var(--black);color:var(--white);padding:1.4rem;display:flex;ju
     <div class="geo-badge safe"><span>98.6%</span><span class="geo-badge-l">Splash<br>Reduction</span></div>
   </div>
   <div class="geo-hint">All three layers — every stream redirected to the drain</div>
+</div>
+
+  </div></div>
 </div>
 
 <script>
@@ -1605,7 +1645,7 @@ const ring = document.getElementById('cur-ring');
 let mx=-100,my=-100,rx=-100,ry=-100;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
 (function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.feat-hd,.pstat,.hstat,.nav-cta').forEach(el=>{
+document.querySelectorAll('a,button,.feat-hd,.expander-hd,.pstat,.hstat,.nav-cta').forEach(el=>{
   el.addEventListener('mouseenter',()=>cur.classList.add('h'));
   el.addEventListener('mouseleave',()=>cur.classList.remove('h'));
 });
@@ -1650,6 +1690,19 @@ window.addEventListener('scroll',()=>{
     el.style.transform='translateY('+(fc*.025)+'px)';
   });
 },{passive:true});
+
+// SECTION EXPANDERS
+document.querySelectorAll('[data-expander]').forEach(exp=>{
+  exp.querySelector('.expander-hd').addEventListener('click',()=>{
+    exp.classList.toggle('open');
+    if(exp.classList.contains('open')){
+      setTimeout(()=>{
+        const top=exp.getBoundingClientRect().top;
+        if(top<0)window.scrollBy({top:top-20,behavior:'smooth'});
+      },50);
+    }
+  });
+});
 
 // ACCORDION
 document.querySelectorAll('.feat').forEach(feat=>{
