@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FUTURE SHIT — Bathroom Innovation Think Tank</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#060C12;
+  --bg2:#091018;
+  --bg3:#0B1520;
+  --teal:#00E8C8;
+  --teal-dim:#00B89E;
+  --cyan:#00D4FF;
+  --white:#EFF6F5;
+  --mist:rgba(239,246,245,0.58);
+  --fog:rgba(239,246,245,0.28);
+  --navy:#0A1628;
+  --card-bg:rgba(9,22,38,0.85);
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Outfit',sans-serif;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* CURSOR */
+.cur{position:fixed;width:8px;height:8px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .08s;box-shadow:0 0 14px var(--teal),0 0 28px rgba(0,232,200,.4);}
+.cur-ring{position:fixed;width:34px;height:34px;border:1px solid rgba(0,232,200,.32);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:border-color .2s;}
+
+/* CANVAS */
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none;}
+
+/* HEADER */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.5rem 3.5rem;
+  background:rgba(6,12,18,.7);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(0,232,200,.07);
+}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:.08em;color:var(--white);}
+.logo span{color:var(--teal);}
+nav{display:flex;gap:2rem;align-items:center;}
+nav a{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--fog);transition:color .2s;cursor:none;}
+nav a:hover{color:var(--teal);}
+.nav-pill{padding:.5rem 1.3rem;border:1px solid var(--teal);color:var(--teal)!important;border-radius:3rem;transition:background .2s,color .2s,transform .15s!important;}
+.nav-pill:hover{background:var(--teal);color:var(--bg)!important;transform:translateY(-1px);}
+
+/* ── HERO ── */
+#hero{
+  position:relative;z-index:10;
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:9rem 3.5rem 6rem;
+}
+.h-tag{
+  font-size:.63rem;letter-spacing:.36em;text-transform:uppercase;color:var(--teal);
+  margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem;
+  opacity:0;animation:up .9s cubic-bezier(.16,1,.3,1) .15s forwards;
+}
+.h-tag::before{content:'';width:28px;height:1px;background:var(--teal);}
+.h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(4rem,10vw,11rem);
+  line-height:.88;letter-spacing:.02em;
+  opacity:0;animation:up 1s cubic-bezier(.16,1,.3,1) .3s forwards;
+}
+.h1 .t{color:var(--teal);text-shadow:0 0 40px rgba(0,232,200,.5),0 0 80px rgba(0,232,200,.18);}
+.h-sub{
+  margin-top:2rem;max-width:560px;
+  font-size:.9rem;font-weight:300;line-height:1.95;color:var(--mist);
+  opacity:0;animation:up 1s cubic-bezier(.16,1,.3,1) .48s forwards;
+}
+.h-btns{
+  margin-top:2.8rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;
+  opacity:0;animation:up 1s cubic-bezier(.16,1,.3,1) .65s forwards;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.9rem 2.2rem;font-family:'Outfit',sans-serif;
+  font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;border-radius:3rem;transition:all .22s;cursor:none;
+}
+.btn-teal{background:var(--teal);color:var(--bg);box-shadow:0 0 30px rgba(0,232,200,.32),0 8px 32px rgba(0,232,200,.18);}
+.btn-teal:hover{background:#00fff5;box-shadow:0 0 50px rgba(0,232,200,.5),0 12px 40px rgba(0,232,200,.28);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(239,246,245,.16);}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px);}
+
+/* HERO FLOATS */
+.h-stats{
+  position:absolute;right:3.5rem;top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:1rem;
+  opacity:0;animation:fadeIn 1s 1.2s forwards;
+}
+.sc{
+  background:rgba(9,16,24,.85);border:1px solid rgba(0,232,200,.12);
+  border-radius:1rem;padding:1.2rem 1.6rem;min-width:148px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 24px rgba(0,0,0,.4),inset 0 1px 0 rgba(0,232,200,.05);
+  transition:border-color .25s,transform .25s;
+}
+.sc:hover{border-color:rgba(0,232,200,.35);transform:translateX(-4px);}
+.sc-n{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--teal);line-height:1;text-shadow:0 0 20px rgba(0,232,200,.38);}
+.sc-l{font-size:.57rem;letter-spacing:.13em;text-transform:uppercase;color:var(--fog);margin-top:.3rem;}
+
+/* SCROLL */
+.scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fadeIn 1s 1.6s forwards;}
+.scroll-hint span{font-size:.52rem;letter-spacing:.28em;text-transform:uppercase;color:var(--fog);}
+.sp{width:20px;height:36px;border:1px solid rgba(0,232,200,.2);border-radius:10px;position:relative;}
+.sp::after{content:'';position:absolute;top:5px;left:50%;transform:translateX(-50%);width:3px;height:6px;background:var(--teal);border-radius:2px;animation:bob 1.7s ease-in-out infinite;}
+
+/* TICKER */
+.ticker-wrap{position:relative;z-index:10;overflow:hidden;background:var(--teal);padding:.8rem 0;}
+.ticker{display:flex;white-space:nowrap;animation:ticker 28s linear infinite;}
+.ticker span{font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);padding:0 2rem;}
+.td{opacity:.3!important;padding:0 .3rem!important;}
+
+/* SECTIONS */
+section.s{position:relative;z-index:10;}
+.inner{max-width:1180px;margin:0 auto;padding:7rem 3.5rem;}
+.tag{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;}
+.tag::before{content:'';width:18px;height:1px;background:var(--teal);}
+.tag.center{justify-content:center;}
+
+/* MANIFESTO / ABOUT */
+#about{background:var(--bg2);}
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:center;}
+.about-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,5.5rem);line-height:.92;letter-spacing:.02em;}
+.about-h em{font-style:normal;color:var(--teal);}
+.body-t{font-size:.83rem;font-weight:300;line-height:2.05;color:var(--mist);}
+.body-t p{margin-bottom:1.1rem;}
+.body-t strong{color:var(--white);font-weight:600;}
+
+/* PRODUCTS HERO BAND */
+#products-intro{background:var(--bg);}
+.prod-intro-inner{max-width:1180px;margin:0 auto;padding:5rem 3.5rem 2rem;}
+.prod-super{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,7.5rem);line-height:.88;letter-spacing:.02em;color:var(--white);}
+.prod-super em{color:var(--teal);font-style:normal;}
+.prod-super-sub{margin-top:1.5rem;max-width:580px;font-size:.85rem;font-weight:300;line-height:2;color:var(--mist);}
+
+/* PRODUCT SECTIONS */
+.product-section{
+  position:relative;z-index:10;
+  border-top:1px solid rgba(0,232,200,.08);
+}
+.product-section:nth-child(odd){background:var(--bg2);}
+.product-section:nth-child(even){background:var(--bg3);}
+
+.prod-inner{max-width:1180px;margin:0 auto;padding:6rem 3.5rem;}
+.prod-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;}
+.prod-layout.flip{grid-template-columns:1.4fr 1fr;}
+
+/* product number badge */
+.prod-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:7rem;line-height:1;letter-spacing:-.02em;
+  color:rgba(0,232,200,.07);
+  margin-bottom:-1rem;
+  display:block;
+}
+.prod-tag{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem;display:flex;align-items:center;gap:.7rem;}
+.prod-tag::before{content:'';width:18px;height:1px;background:var(--teal);}
+.prod-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,5rem);line-height:.9;letter-spacing:.02em;margin-bottom:1.5rem;}
+.prod-name em{font-style:normal;color:var(--teal);}
+.prod-desc{font-size:.83rem;font-weight:300;line-height:2.05;color:var(--mist);margin-bottom:2rem;}
+.prod-desc p{margin-bottom:1rem;}
+.prod-desc strong{color:var(--white);font-weight:600;}
+
+/* feature pills */
+.features{display:flex;flex-direction:column;gap:.7rem;}
+.feat{
+  display:flex;align-items:flex-start;gap:.8rem;
+  background:rgba(0,232,200,.04);
+  border:1px solid rgba(0,232,200,.1);
+  border-radius:.75rem;
+  padding:1rem 1.2rem;
+  font-size:.75rem;font-weight:300;line-height:1.7;color:var(--mist);
+  transition:border-color .2s,background .2s;
+}
+.feat:hover{border-color:rgba(0,232,200,.25);background:rgba(0,232,200,.07);}
+.feat-icon{font-size:1.1rem;flex-shrink:0;margin-top:.1rem;}
+.feat strong{color:var(--teal);font-weight:600;display:block;margin-bottom:.15rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;}
+
+/* product visual panel */
+.prod-visual{
+  background:rgba(0,232,200,.03);
+  border:1px solid rgba(0,232,200,.1);
+  border-radius:1.2rem;
+  padding:3rem 2.5rem;
+  display:flex;flex-direction:column;
+  gap:1.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.prod-visual::before{
+  content:'';position:absolute;top:-40px;right:-40px;
+  width:180px;height:180px;
+  background:radial-gradient(circle,rgba(0,232,200,.08) 0%,transparent 70%);
+  border-radius:50%;
+}
+.prod-visual-label{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--fog);}
+.prod-big-stat{
+  border-bottom:1px solid rgba(0,232,200,.08);
+  padding-bottom:1.5rem;
+}
+.prod-big-stat:last-child{border-bottom:none;padding-bottom:0;}
+.pbs-n{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--teal);line-height:1;text-shadow:0 0 20px rgba(0,232,200,.3);}
+.pbs-l{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-top:.3rem;}
+.prod-cta{
+  margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal);text-decoration:none;cursor:none;
+  transition:gap .2s;
+}
+.prod-cta:hover{gap:.8rem;}
+
+/* STATUS BADGE */
+.status-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.4rem .9rem;
+  background:rgba(0,232,200,.08);
+  border:1px solid rgba(0,232,200,.18);
+  border-radius:3rem;
+  font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);
+  margin-bottom:1.2rem;
+}
+.status-dot{width:6px;height:6px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite;}
+
+/* CONTACT */
+#contact{background:var(--navy);text-align:center;}
+#contact .inner{padding:7rem 3.5rem;}
+.cth{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,6rem);line-height:.9;letter-spacing:.02em;color:var(--white);margin-bottom:1.5rem;}
+.cth em{font-style:normal;color:var(--teal);}
+.csub{font-size:.82rem;font-weight:300;line-height:2;color:var(--mist);max-width:440px;margin:0 auto 2.5rem;}
+.email-link{
+  display:inline-flex;align-items:center;gap:.7rem;
+  padding:.9rem 2rem;border:1px solid rgba(0,232,200,.25);border-radius:3rem;
+  font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal);text-decoration:none;transition:background .2s,border-color .2s;cursor:none;
+}
+.email-link:hover{background:rgba(0,232,200,.1);border-color:var(--teal);}
+
+/* FOOTER */
+footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid rgba(0,232,200,.07);padding:2rem 3.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.fl{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.08em;}
+.fl span{color:var(--teal);}
+.fc{font-size:.6rem;letter-spacing:.1em;color:var(--fog);text-align:right;line-height:1.9;}
+
+/* KEYFRAMES */
+@keyframes up{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);opacity:1;}80%{transform:translateX(-50%) translateY(15px);opacity:0;}}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+@media(max-width:1000px){
+  header{padding:1.4rem 1.8rem;}
+  #hero{padding:8rem 1.8rem 6rem;}
+  .h-stats{display:none;}
+  .inner,.prod-inner,.prod-intro-inner{padding:5rem 1.8rem;}
+  .about-grid,.prod-layout,.prod-layout.flip{grid-template-columns:1fr;gap:3rem;}
+  footer{padding:1.8rem;flex-direction:column;text-align:center;}
+  .fc{text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="cur-ring"></div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Future <span>Shit</span><sup style="font-family:'Outfit',sans-serif;font-size:.45em;font-weight:300;color:var(--fog);">™</sup></div>
+  <nav>
+    <a href="#about">Manifesto</a>
+    <a href="#product-1">Products</a>
+    <a href="#contact" class="nav-pill">Contact</a>
+  </nav>
+</header>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section id="hero">
+  <p class="h-tag">Bathroom Innovation Think Tank — Est. 2024</p>
+  <h1 class="h1">
+    Rethinking<br>The <span class="t">Bathroom.</span><br>Completely.
+  </h1>
+  <p class="h-sub">
+    Future Shit is a think tank dedicated to redesigning the bathroom for the 21st century. Cleaner. Smarter. More human. We're building the technology, the products, and the systems that will make it happen.
+  </p>
+  <div class="h-btns">
+    <a href="#product-1" class="btn btn-teal">See Our Products →</a>
+    <a href="#about" class="btn btn-ghost">Our Manifesto</a>
+  </div>
+
+  <div class="h-stats">
+    <div class="sc"><div class="sc-n">3</div><div class="sc-l">Active Products</div></div>
+    <div class="sc"><div class="sc-n">97%</div><div class="sc-l">Splash Reduction</div></div>
+    <div class="sc"><div class="sc-n">12K+</div><div class="sc-l">CFD Simulations</div></div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="sp"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>No More Splash</span><span class="td">◆</span>
+    <span>Luxury Venue Bathrooms</span><span class="td">◆</span>
+    <span>GottaGo Network</span><span class="td">◆</span>
+    <span>21st Century Hygiene</span><span class="td">◆</span>
+    <span>Zero Blowback Tech</span><span class="td">◆</span>
+    <span>Fluid Dynamics Research</span><span class="td">◆</span>
+    <span>Clean Stream Innovation</span><span class="td">◆</span>
+    <span>No More Splash</span><span class="td">◆</span>
+    <span>Luxury Venue Bathrooms</span><span class="td">◆</span>
+    <span>GottaGo Network</span><span class="td">◆</span>
+    <span>21st Century Hygiene</span><span class="td">◆</span>
+    <span>Zero Blowback Tech</span><span class="td">◆</span>
+    <span>Fluid Dynamics Research</span><span class="td">◆</span>
+    <span>Clean Stream Innovation</span><span class="td">◆</span>
+  </div>
+</div>
+
+<!-- ══ MANIFESTO ════════════════════════════════════════ -->
+<section class="s" id="about" style="background:var(--bg2);">
+  <div class="inner">
+    <p class="tag">Our Manifesto</p>
+    <div class="about-grid">
+      <h2 class="about-h">The bathroom<br>hasn't changed<br>in <em>100 years.</em><br>We're fixing that.</h2>
+      <div class="body-t">
+        <p>The bathroom is the most intimate room in modern life. Every human being uses one multiple times a day. And yet it remains one of the <strong>least innovated spaces in the built environment.</strong></p>
+        <p>At Future Shit, we're a team of engineers, product designers, and systems thinkers who believe the bathroom deserves the same obsessive R&D investment as smartphones, electric vehicles, and aerospace.</p>
+        <p>We're not building incremental improvements. We're <strong>rethinking the entire experience</strong> — the technology, the access, the cleanliness, the dignity of it. Starting with three core products that each solve a real, unsolved problem.</p>
+        <p>The future is clean. The future is smart. The future doesn't have piss on your shoes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCTS INTRO ════════════════════════════════════ -->
+<section class="s" id="products-intro" style="background:var(--bg);">
+  <div class="prod-intro-inner">
+    <p class="tag">Our Products</p>
+    <h2 class="prod-super">Three products.<br><em>One mission.</em></h2>
+    <p class="prod-super-sub">Each product tackles a different dimension of the bathroom problem — from hardware to software to access infrastructure. Together, they form a complete vision for 21st century hygiene.</p>
+  </div>
+</section>
+
+<!-- ══ PRODUCT 1: URINAL ═════════════════════════════════ -->
+<section class="product-section" id="product-1">
+  <div class="prod-inner">
+    <div class="prod-layout">
+      <div>
+        <span class="prod-num">01</span>
+        <div class="prod-tag">Product One</div>
+        <div class="status-badge"><span class="status-dot"></span>In Development</div>
+        <h2 class="prod-name">The <em>Zero</em><br>Splash Urinal</h2>
+        <div class="prod-desc">
+          <p>We've all experienced it. You step away from a urinal and look down. Your shoes. Your trousers. The floor. <strong>Splashback is not a you problem — it's a design problem.</strong> And nobody has seriously tried to fix it. Until now.</p>
+          <p>Our flagship product is a completely re-engineered urinal that uses fluid dynamics, precision geometry, and nano-scale surface science to eliminate splashback entirely. Zero retrograde droplets. Zero spray. A genuinely clean experience.</p>
+        </div>
+        <div class="features">
+          <div class="feat"><span class="feat-icon">🌀</span><div><strong>Vortex Absorption Surface</strong>Microstructured wall geometry redirects fluid energy downward, inspired by mantis shrimp impact mechanics and lotus leaf hydrophobics.</div></div>
+          <div class="feat"><span class="feat-icon">📐</span><div><strong>15–22° Impact Angle</strong>CFD-optimized geometry eliminates the 90° impact angle that causes splashback — the stream glances, not crashes.</div></div>
+          <div class="feat"><span class="feat-icon">⚗️</span><div><strong>Nano-Hydrophobic Coating</strong>Aerospace-derived ceramic coating with 150°+ water contact angles. Self-cleaning at the molecular level.</div></div>
+          <div class="feat"><span class="feat-icon">💨</span><div><strong>Passive Airflow Channel</strong>Engineered negative pressure gradient pulls aerosol droplets toward the drain. No moving parts.</div></div>
+        </div>
+      </div>
+      <div class="prod-visual">
+        <div class="prod-visual-label">Performance Targets</div>
+        <div class="prod-big-stat"><div class="pbs-n">97%</div><div class="pbs-l">Splash Reduction vs. Standard Urinal</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">12K+</div><div class="pbs-l">Computational Fluid Dynamics Simulations Run</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">3</div><div class="pbs-l">Patents Pending on Core Technology</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">0</div><div class="pbs-l">Moving Parts Required</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCT 2: CONCERT PODS ══════════════════════════ -->
+<section class="product-section" id="product-2">
+  <div class="prod-inner">
+    <div class="prod-layout flip">
+      <div class="prod-visual">
+        <div class="prod-visual-label">The Experience</div>
+        <div class="prod-big-stat"><div class="pbs-n">5 min</div><div class="pbs-l">Private, timed bathroom session — all yours</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">App</div><div class="pbs-l">Join the queue from anywhere — keep enjoying the show</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">★★★★★</div><div class="pbs-l">Reputation system keeps every pod spotless</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">0</div><div class="pbs-l">Lines to stand in while missing the music</div></div>
+      </div>
+      <div>
+        <span class="prod-num">02</span>
+        <div class="prod-tag">Product Two</div>
+        <div class="status-badge"><span class="status-dot"></span>Pilot Planning</div>
+        <h2 class="prod-name"><em>Encore</em><br>Luxury Venue<br>Bathroom Pods</h2>
+        <div class="prod-desc">
+          <p>The porta-potty is one of the most degrading experiences in modern life. A hot plastic box, a line of 40 people, a horrible smell, and you miss half the show getting there and back. <strong>It doesn't have to be this way.</strong></p>
+          <p>Encore is a luxury bathroom pod system designed for concerts, festivals, and major events. We bring in a trailer with a suite of private, self-contained, hotel-grade bathroom pods. But the magic isn't just the hardware — it's the system.</p>
+          <p><strong>Open the app. Join the virtual queue. Go back and enjoy the show.</strong> When your pod is ready, you get a push notification and a one-time unlock code sent directly to your phone. Walk up, unlock, and you have five uninterrupted minutes of a genuinely beautiful, fully private bathroom experience.</p>
+          <p>Because users are on accounts with verified identities and a reputation rating, we can guarantee cleanliness and appropriate use — making it possible to offer a premium experience that stays premium.</p>
+        </div>
+        <div class="features">
+          <div class="feat"><span class="feat-icon">📱</span><div><strong>Virtual Queue</strong>Join from your seat. Get notified when it's your turn. Never miss a song standing in line.</div></div>
+          <div class="feat"><span class="feat-icon">🔐</span><div><strong>One-Time Unlock Code</strong>Secure, time-limited access code delivered to your phone. Your pod, your privacy, your five minutes.</div></div>
+          <div class="feat"><span class="feat-icon">⭐</span><div><strong>Reputation System</strong>Like Uber for bathrooms. Account holders maintain a rating. Bad actors get removed. Quality stays high.</div></div>
+          <div class="feat"><span class="feat-icon">✨</span><div><strong>Hotel-Grade Hardware</strong>Real fixtures. Real surfaces. Automatic sanitization between every use. No compromises.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCT 3: GOTTAGO ════════════════════════════════ -->
+<section class="product-section" id="product-3">
+  <div class="prod-inner">
+    <div class="prod-layout">
+      <div>
+        <span class="prod-num">03</span>
+        <div class="prod-tag">Product Three</div>
+        <div class="status-badge"><span class="status-dot"></span>Concept Stage</div>
+        <h2 class="prod-name"><em>GottaGo</em><br>City Bathroom<br>Network</h2>
+        <div class="prod-desc">
+          <p>Finding a clean, accessible bathroom in a city is a surprisingly hard problem. Public restrooms are scarce, often unsafe, and frequently locked. Coffee shops require a purchase. It's a daily friction that affects everyone — especially people who are traveling, elderly, or managing health conditions.</p>
+          <p><strong>GottaGo is a subscription network that turns existing business bathrooms into a city-wide clean bathroom system.</strong> For $10/month, members get access to a vetted network of partnered businesses — coffee shops, bookstores, retailers — that have agreed to let GottaGo members use their facilities, no purchase required.</p>
+          <p>Businesses win too. Every bathroom visit is a foot traffic opportunity. A GottaGo member walking into Powell's to use the bathroom might walk out with a book. And because every member is verified and rated, business owners aren't taking a risk — <strong>our reputation system means only good actors get access.</strong></p>
+        </div>
+        <div class="features">
+          <div class="feat"><span class="feat-icon">🗺️</span><div><strong>City-Wide Access Map</strong>Find a clean, verified bathroom near you in seconds. Every location rated and reviewed by real members.</div></div>
+          <div class="feat"><span class="feat-icon">🤝</span><div><strong>Business Partnership Win</strong>Partners get verified foot traffic. Members skip the awkward "can I use your bathroom" conversation.</div></div>
+          <div class="feat"><span class="feat-icon">⭐</span><div><strong>Two-Way Reputation System</strong>Members and locations are both rated. Bad actors on either side get removed. The network stays clean.</div></div>
+          <div class="feat"><span class="feat-icon">💳</span><div><strong>$10/month Membership</strong>Less than a coffee a week for clean bathroom access anywhere in the city.</div></div>
+        </div>
+      </div>
+      <div class="prod-visual">
+        <div class="prod-visual-label">The Network Model</div>
+        <div class="prod-big-stat"><div class="pbs-n">$10</div><div class="pbs-l">Per month — clean bathroom access, anywhere</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">2-Way</div><div class="pbs-l">Reputation system — members and venues both rated</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">↑ Foot</div><div class="pbs-l">Traffic uplift for every partner business</div></div>
+        <div class="prod-big-stat"><div class="pbs-n">0</div><div class="pbs-l">Purchases required — just show your membership</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══════════════════════════════════════════ -->
+<section class="s" id="contact" style="background:var(--navy);">
+  <div class="inner" style="text-align:center;">
+    <p class="tag center">Get In Touch</p>
+    <h2 class="cth">Let's build<br>the <em>future</em><br>together.</h2>
+    <p class="csub">Research partnerships, investment, pilot programs, press, or a shared obsession with fluid dynamics — we want to hear from you.</p>
+    <a href="mailto:hello@futureshit.io" class="email-link">✉ hello@futureshit.io</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Future <span>Shit</span>™</div>
+  <div class="fc">Bathroom Innovation Think Tank<br>© 2026 Future Shit Inc. All splashes reserved.</div>
+</footer>
+
+<!-- THREE.JS BACKGROUND -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const canvas = document.getElementById('bg');
+const R = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+R.setPixelRatio(Math.min(devicePixelRatio,2));
+R.setSize(innerWidth,innerHeight);
+R.setClearColor(0x000000,0);
+
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(58,innerWidth/innerHeight,.1,600);
+cam.position.z=62;
+
+// ── WAVE PARTICLE MESH ─────────────────────────────────
+const COLS=90,ROWS=56,W=140,H=88,N=COLS*ROWS;
+const wPos=new Float32Array(N*3),wSiz=new Float32Array(N),wCol=new Float32Array(N*3);
+for(let r=0;r<ROWS;r++){
+  for(let c=0;c<COLS;c++){
+    const i=r*COLS+c;
+    const x=-W/2+(c/(COLS-1))*W,y=-H/2+(r/(ROWS-1))*H;
+    wPos[i*3]=x;wPos[i*3+1]=y;wPos[i*3+2]=0;
+    wSiz[i]=.7+Math.random()*1.6;
+    const hot=Math.pow(1-Math.abs(c/(COLS-1)-.5)*2,2)*Math.pow(1-Math.abs(r/(ROWS-1)-.5)*2,2);
+    wCol[i*3]=0;wCol[i*3+1]=.5+hot*.5+Math.random()*.15;wCol[i*3+2]=.6+hot*.4;
+  }
+}
+const wGeo=new THREE.BufferGeometry();
+wGeo.setAttribute('position',new THREE.BufferAttribute(wPos,3));
+wGeo.setAttribute('aSize',new THREE.BufferAttribute(wSiz,1));
+wGeo.setAttribute('aColor',new THREE.BufferAttribute(wCol,3));
+const wMat=new THREE.ShaderMaterial({
+  uniforms:{uTime:{value:0},uMouse:{value:new THREE.Vector2(0,0)},uScroll:{value:0}},
+  vertexShader:`
+    attribute float aSize;attribute vec3 aColor;
+    uniform float uTime;uniform vec2 uMouse;uniform float uScroll;
+    varying vec3 vCol;varying float vAlpha;
+    void main(){
+      vec3 p=position;
+      float w1=sin(p.x*.10+uTime*.90)*cos(p.y*.08+uTime*.55)*2.8;
+      float w2=sin(p.x*.06-uTime*.50+p.y*.045)*2.0;
+      float w3=cos(p.x*.16+p.y*.10+uTime*.70)*.9;
+      float w4=sin((p.x+p.y)*.05+uTime*1.2)*.6;
+      p.z+=w1+w2+w3+w4;
+      vec2 mw=uMouse*vec2(70.,44.);
+      float d=length(p.xy-mw);
+      float shock=sin(d*.38-uTime*3.8)*exp(-d*.055)*7.0;
+      p.z+=shock;
+      p.y-=uScroll*.015;
+      float elev=clamp((p.z+6.)/12.,0.,1.);
+      vCol=aColor;vAlpha=.03+elev*.42;
+      vec4 mv=modelViewMatrix*vec4(p,1.);
+      gl_PointSize=aSize*(230./-mv.z)*(0.6+elev*.9);
+      gl_Position=projectionMatrix*mv;
+    }
+  `,
+  fragmentShader:`
+    varying vec3 vCol;varying float vAlpha;
+    void main(){
+      float d=length(gl_PointCoord-.5);if(d>.5)discard;
+      gl_FragColor=vec4(vCol,(1.-d*2.)*vAlpha);
+    }
+  `,
+  transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+});
+scene.add(new THREE.Points(wGeo,wMat));
+
+// ── STREAM LINES ───────────────────────────────────────
+const streamGroup=new THREE.Group();
+for(let s=0;s<20;s++){
+  const pts=[],segs=80;
+  const sx=-W/2+Math.random()*W,sy=-H/2+Math.random()*H;
+  const ang=Math.random()*Math.PI*2,len=20+Math.random()*55,crv=(Math.random()-.5)*1.6;
+  for(let i=0;i<=segs;i++){
+    const t=i/segs;
+    pts.push(new THREE.Vector3(sx+Math.cos(ang+crv*t)*len*t,sy+Math.sin(ang+crv*t)*len*t,-1+Math.sin(t*Math.PI)*3));
+  }
+  const curve=new THREE.CatmullRomCurve3(pts);
+  const geo=new THREE.BufferGeometry().setFromPoints(curve.getPoints(segs));
+  const tA=new Float32Array(segs+1);for(let i=0;i<=segs;i++)tA[i]=i/segs;
+  geo.setAttribute('aT',new THREE.BufferAttribute(tA,1));
+  const mat=new THREE.ShaderMaterial({
+    uniforms:{uTime:{value:Math.random()*10}},
+    vertexShader:`attribute float aT;uniform float uTime;varying float vAlpha;void main(){float pulse=sin(aT*8.-uTime*2.5)*.5+.5;vAlpha=pulse*(.3-abs(aT-.5)*.5);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    fragmentShader:`varying float vAlpha;void main(){gl_FragColor=vec4(.0,.9,.8,vAlpha*.7);}`,
+    transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+  });
+  streamGroup.add(new THREE.Line(geo,mat));
+}
+scene.add(streamGroup);
+
+// ── MIST ───────────────────────────────────────────────
+const MIST=300,mPos=new Float32Array(MIST*3),mSiz=new Float32Array(MIST),mVel=[];
+for(let i=0;i<MIST;i++){
+  mPos[i*3]=(Math.random()-.5)*140;mPos[i*3+1]=(Math.random()-.5)*90;mPos[i*3+2]=(Math.random()-.5)*20+10;
+  mSiz[i]=1+Math.random()*3;mVel.push({x:(Math.random()-.5)*.015,y:(Math.random()-.5)*.01,ph:Math.random()*Math.PI*2});
+}
+const mGeo=new THREE.BufferGeometry();
+mGeo.setAttribute('position',new THREE.BufferAttribute(mPos,3));
+mGeo.setAttribute('size',new THREE.BufferAttribute(mSiz,1));
+const mMat=new THREE.ShaderMaterial({
+  uniforms:{uTime:{value:0}},
+  vertexShader:`attribute float size;varying float vA;void main(){vA=.5-length(position.xy)/80.;vec4 mv=modelViewMatrix*vec4(position,1.);gl_PointSize=size*(250./-mv.z);gl_Position=projectionMatrix*mv;}`,
+  fragmentShader:`varying float vA;void main(){float d=length(gl_PointCoord-.5);if(d>.5)discard;gl_FragColor=vec4(.0,.88,.78,(1.-d*2.)*clamp(vA*.08,0.,.08));}`,
+  transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+});
+scene.add(new THREE.Points(mGeo,mMat));
+
+// ── GLOW ORBS ──────────────────────────────────────────
+const orbData=[];
+for(let i=0;i<6;i++){
+  const glow=new THREE.Mesh(
+    new THREE.SphereGeometry(14+Math.random()*12,8,8),
+    new THREE.MeshBasicMaterial({color:0x00E8C8,transparent:true,opacity:.016})
+  );
+  glow.position.set((Math.random()-.5)*W*.7,(Math.random()-.5)*H*.7,-18-Math.random()*10);
+  scene.add(glow);
+  orbData.push({mesh:glow,ox:glow.position.x,oy:glow.position.y,ph:Math.random()*Math.PI*2,sp:.2+Math.random()*.3});
+}
+
+// ── INTERACTION ────────────────────────────────────────
+let mx=0,my=0,scrollY=0;
+document.addEventListener('mousemove',e=>{mx=(e.clientX/innerWidth-.5)*2;my=-(e.clientY/innerHeight-.5)*2;});
+window.addEventListener('scroll',()=>{scrollY=window.scrollY;});
+
+// ── ANIMATE ────────────────────────────────────────────
+let t=0;
+(function loop(){
+  requestAnimationFrame(loop);t+=.01;
+  wMat.uniforms.uTime.value=t;wMat.uniforms.uMouse.value.set(mx,my);wMat.uniforms.uScroll.value=scrollY;
+  mMat.uniforms.uTime.value=t;
+  streamGroup.children.forEach(l=>{l.material.uniforms.uTime.value+=.012;});
+  const mp=mGeo.attributes.position.array;
+  for(let i=0;i<MIST;i++){
+    mp[i*3]+=mVel[i].x+Math.sin(t*.3+mVel[i].ph)*.008;
+    mp[i*3+1]+=mVel[i].y+Math.cos(t*.25+mVel[i].ph)*.006;
+    if(mp[i*3]>72)mp[i*3]=-72;if(mp[i*3]<-72)mp[i*3]=72;
+    if(mp[i*3+1]>48)mp[i*3+1]=-48;if(mp[i*3+1]<-48)mp[i*3+1]=48;
+  }
+  mGeo.attributes.position.needsUpdate=true;
+  orbData.forEach(o=>{o.mesh.position.x=o.ox+Math.sin(t*o.sp+o.ph)*8;o.mesh.position.y=o.oy+Math.cos(t*o.sp*.7+o.ph)*5;});
+  cam.position.x+=(mx*5-cam.position.x)*.02;cam.position.y+=(my*3-cam.position.y)*.02;cam.lookAt(0,0,0);
+  canvas.style.opacity=Math.max(0,1-scrollY/600);
+  R.render(scene,cam);
+})();
+
+window.addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();R.setSize(innerWidth,innerHeight);});
+
+// ── CURSOR ─────────────────────────────────────────────
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let rx=0,ry=0;
+document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';rx+=(e.clientX-rx)*.12;ry+=(e.clientY-ry)*.12;});
+(function cl(){requestAnimationFrame(cl);ring.style.left=rx+'px';ring.style.top=ry+'px';})();
+document.querySelectorAll('a,.feat,.sc,.prod-visual,.status-badge').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(3)';ring.style.borderColor='rgba(0,232,200,.6)';});
+  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.borderColor='rgba(0,232,200,.32)';});
+});
+</script>
+</body>
+</html>
